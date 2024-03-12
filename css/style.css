@@ -27,7 +27,7 @@ body {
   position: relative;
   min-height: 100vw; }
 
-.titulo_principal, .main_index .titulo1, .main_catalogo .titulo1, .main_nosotros .titulo1 {
+.titulo_principal, .main_index .titulo1, .main_catalogo .titulo1, .main_nosotros .titulo1, .main_blog h1 {
   font-family: "Mochiy Pop P One", sans-serif;
   font-size: 2.5rem;
   font-weight: 700px;
@@ -54,7 +54,7 @@ body {
   text-align: center;
   padding: 2rem; }
 
-.texto_resaltado {
+.texto_resaltado, .main_blog .grid_page3 h2 {
   background-color: rgba(0, 0, 0, 0.584);
   /* Color de fondo semi-transparente */
   padding: 5px 10px;
@@ -250,6 +250,75 @@ body {
   /*Cambia el tamaño de la grilla de la galeria */
   .main_nosotros .grid_galery {
     grid-template-columns: repeat(1, 100%); } }
+
+/* ------------------ PAGE 3 ------------------ */
+.main_blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem; }
+  .main_blog .grid_page3 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "img0 img0 img1 img2" "img3 img4 img5 img5";
+    grid-auto-rows: 300px;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    .main_blog .grid_page3 .img_0 {
+      grid-area: img0;
+      background-color: aquamarine;
+      background-image: url("https://algunwey.com/wp-content/uploads/2018/07/curiosidades-donas-origen-historia.jpg");
+      background-size: cover;
+      background-position: center; }
+      .main_blog .grid_page3 .img_0 a {
+        text-decoration: none; }
+    .main_blog .grid_page3 .img_1 {
+      grid-area: img1;
+      background-color: #f6f68f;
+      background-image: url("https://mdr.ar/download/multimedia.miniatura.b1ff4d1dc341bf67.ZG9uYXMtY2FzZXJhc19taW5pYXR1cmEud2VicA%3D%3D.webp");
+      background-size: cover;
+      background-position: center; }
+      .main_blog .grid_page3 .img_1 a {
+        text-decoration: none; }
+    .main_blog .grid_page3 .img_2 {
+      grid-area: img2;
+      background-color: #ac6ce7;
+      background-image: url("https://www.gourmet.cl/wp-content/uploads/2022/10/RECETA-donuts-alta-9.jpg");
+      background-size: cover;
+      background-position: center; }
+      .main_blog .grid_page3 .img_2 a {
+        text-decoration: none; }
+    .main_blog .grid_page3 .img_3 {
+      grid-area: img3;
+      background-color: #3d3de3; }
+    .main_blog .grid_page3 .img_4 {
+      grid-area: img4;
+      background-color: #b7f759; }
+    .main_blog .grid_page3 .img_5 {
+      grid-area: img5;
+      background-color: pink; }
+
+/* Pseudoclase para la etiqueta <a> */
+.grid_page3 .img_1 a h2:visited {
+  color: #757585; }
+
+.grid_page3 a h2:hover {
+  color: #00d5ff; }
+
+/* --------  MEDIA QUERY ----------*/
+/* Estrategia responsive = Mobile Last */
+@media (max-width: 900px) {
+  .main_blog .grid_page3 {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "img0 img1" "img2 img3" "img4 img5"; } }
+
+@media (max-width: 600px) {
+  /* cambiar el tamaño de la grilla blog/page3 */
+  .main_blog .grid_page3 {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas: "img0" "img1" "img2" "img3" "img4" "img5"; } }
 
 .footer {
   display: flex;
