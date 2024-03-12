@@ -1,0 +1,48 @@
+// Armo mi paleta de colores ---> 5 tonos:
+$rosa:rgb(243, 136, 230);
+$celeste: rgb(108, 191, 243);
+$naranja: rgb(239, 165, 74);
+$verde: #86EACC ;
+$crema: #fee9bd;
+$rosa_fuerte:rgb(251, 118, 223);
+
+$sombra: 4px 4px 4px rgba(0, 0, 0, 0.1);
+$sombra_box: -1px 2px 15px 0px #646262;
+// 0 5px 10px rgb(100, 98, 98); 
+
+
+/* -------------------------------------------------------------------------------- */
+
+// FUENTES / Tipografias
+/* Outfit: font-family: "Outfit", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+$fuente_titulo: "Mochiy Pop P One", sans-serif;
+// "Outfit", sans-serif;
+
+/* Poppins: font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// $fuente_general:"Poppins", sans-serif; 
+
+// fuente titulo principal:
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+// "Madimi One", sans-serif;
+$fuente_subtitulo: "Madimi One", sans-serif;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Mochiy+Pop+P+One&display=swap');
+
+// "Mochiy Pop P One", sans-serif;
+
+// Fuente para uso general:
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap');
+$fuente_general:"Montserrat Alternates", sans-serif;
+
+
+/* Jost */
+// @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+/* -------------------------------------------------------------------------------- */

@@ -1,0 +1,64 @@
+
+.titulo_principal{
+    font-family: $fuente_titulo; // Usar la variable para la tipografía
+    font-size: 2.5rem;
+    font-weight: 700px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.titulo_secundario{
+    font-family: $fuente_subtitulo;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.texto_centrado_box{
+    display: flex; /* el contenido se alinee correctamente */
+    flex-direction: column; 
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center;
+    padding: 2rem;
+}
+
+.texto_resaltado {
+    background-color: rgba(0, 0, 0, 0.584); /* Color de fondo semi-transparente */
+    padding: 5px 10px; /* Ajusta el relleno para que el fondo del texto sea visible */
+    color: #ffffff; /* Color del texto */
+    text-align: center;
+    font-size: 20px;
+  }
+
+.boton_seleccion{
+
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300px;
+    text-align: center;
+    text-decoration: none;
+    background-color: $rosa;
+    color: #333;
+    font-family: $fuente_subtitulo;
+
+    padding: 8px 18px;
+    // border: 1px solid #ccc;
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: all 0.3s ease; // Transición suave para la animación
+    box-shadow: $sombra;
+}
+
+// Defino un mixin para las imágenes de fondo, donde paso por parametro el url
+@mixin img_fondo($url) {
+    background-image: url($url);
+    // background-size: cover;
+    background-position: center;
+    background-size: contain; /* Ajusta el tamaño de la imagen para que se ajuste dentro del contenedor */
+    background-repeat: no-repeat;
+  }

@@ -1,0 +1,430 @@
+/* Tipografias */
+/* Outfit: font-family: "Outfit", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap');
+/* Jost */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+/* Poppins: font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* -------------------------------------------------------------------------------- */
+
+
+/* Reseteo */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.footer{
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ------------------- HEADER (logo, lista navegacion y banner) -------------------*/ 
+    /* 1) Logo */
+
+    .header{
+        /* sombra general */
+        box-shadow: 0px 20px 20px #d8d8d8;
+    }
+
+
+    .header__logo{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: rgb(108, 191, 243);
+    }
+    
+    .header .logo_desk{
+        width: 220px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    
+    .logo_cellphone{ display: none;}
+    
+    /* pseudoclase para el navegador */
+
+    .header .container-fluid .nav-item a:hover {
+        color: rgb(169, 17, 17);
+        background-color: rgb(108, 191, 243);
+        margin: 2px;
+
+    }
+  
+
+        /* 2) BANNER*/
+.header .banner_promo img{
+    /* le pongo 100vw si quiero que ocupe el total de la pantalla y 100% si quiero que ocupe el total de mi caja*/
+    width: 100%;
+}
+.banner_celu {display: none;}
+
+
+
+
+/* -------------------------- GRILLAS -------------------------- */
+
+/* -----------------------INDEX--------------------------- */
+
+.grid_container{
+    background-color:  antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "section section section aside"
+    "article article article aside"
+    "footer footer footer footer"
+    ;
+
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+.grid_container section {
+    grid-area: section;
+    background-color: aquamarine;
+}
+
+.grid_container article{
+    grid-area: article;
+    background-color: rgb(255, 250, 96);
+}
+.grid_container aside{
+    grid-area: aside;
+    background-color: rgb(251, 118, 223);
+}
+
+.grid_container footer{
+    grid-area: footer;
+    background-color: rgb(239, 165, 74);
+}
+
+
+
+
+
+
+/* ------------------ PAGE 1------------------ */
+
+.container_p1{
+    background-color: antiquewhite;
+    padding: 1rem;
+}
+
+/* .container_p1 .titulo1{
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 1rem;
+    font-size: 40px;
+    font-weight: bolder;
+} */
+
+.titulo1{
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 1rem;
+    /* text-shadow:  -4px 13px 15px #0d6efd54; */
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.container_p1 .box_container{
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+
+.container_p1 .box_container .box{
+    box-shadow: 0 5px 10px rgb(100, 98, 98);
+    border-radius: 6px;
+    background-color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.container_p1 .box_container .box img{
+    height: 90px;
+}
+
+.container_p1 .box_container .box h3{
+    font-size: 22px;
+    padding: 10px;
+}
+
+.container_p1 .box_container .box p{
+    font-size: 15px;
+}
+
+.container_p1 .box_container .box .boton{
+    /* margin-top: 10px; */
+    display: inline-block;
+    background-color: rgb(243, 136, 230);
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+/* Pseudoclases: */
+.container_p1 .box_container .box .boton:hover{
+    background-color: rgb(108, 191, 243);
+    /* margin: 1px; */
+}
+
+.container_p1 .box_container .box:hover{
+    box-shadow: 0 10px 15px rgb(100, 98, 98) ;
+    transform: scale(1.03);
+}
+
+
+
+/* ------------------ PAGE 2------------------ */
+
+/* la clase se puede reciclar para distintas grillas:mantengo el estilo general */
+.grid_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* hacer los border redondeados */
+    border-radius: 8px;
+    border: solid 3px rgb(100, 98, 98);
+    /* hacer que la imagen se ajuste a la medida de mi grilla */
+    background-size: cover;
+    background-position: center;
+}
+
+/* grid con filas y columnas explicitas */
+.grid_galery{
+   display: grid; 
+   /* hago 4 columnas de una fraccion */
+    grid-template-columns: repeat(5, 1fr);
+    /* uso auto-rows porque quiero q todas mis filas midan lo mismo */
+    grid-auto-rows: 400px;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color:  antiquewhite;
+}
+
+
+
+
+/* ------------------ PAGE 3 ------------------ */
+
+.grid_page3{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "img0 img0 img1 img2"
+        "img3 img4 img5 img5"
+    ;
+    grid-auto-rows: 300px;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+
+.grid_page3 .img_0{
+    grid-area: img0;
+    background-color: aquamarine;
+    background-image: url('https://algunwey.com/wp-content/uploads/2018/07/curiosidades-donas-origen-historia.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.grid_page3 .img_1{
+    grid-area: img1;
+    background-color: rgb(246, 246, 143) ;
+    background-image: url('https://mdr.ar/download/multimedia.miniatura.b1ff4d1dc341bf67.ZG9uYXMtY2FzZXJhc19taW5pYXR1cmEud2VicA%3D%3D.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.grid_page3 .img_2{
+    grid-area: img2;
+    background-color: rgb(172, 108, 231);
+}
+
+.grid_page3 .img_3{
+    grid-area: img3;
+    background-color: rgb(61, 61, 227);
+}
+
+.grid_page3 .img_4{
+    grid-area: img4;
+    background-color: rgb(183, 247, 89);
+}
+
+.grid_page3 .img_5{
+    grid-area: img5;
+    background-color: pink;
+}
+
+.grid_page3 h2{
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    padding: 1rem;
+    text-shadow:  2px 2px 1px rgb(33, 30, 30);
+};
+
+
+/* Pseudoclase para la etiqueta <a> */
+
+.grid_page3 .img_1 a h2:visited{
+    color: rgb(117, 117, 133);
+    text-decoration: none;
+}
+
+.grid_page3 a h2:hover{
+    color: rgb(0, 213, 255);
+}
+
+
+
+/* ------------------ PAGE 4 ------------------ */
+.grid_page4 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "form form form aside"
+        "footer footer footer footer"
+
+    ;
+    /* grid-auto-rows: 300px; */
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+
+.grid_page4 .apartado{
+    grid-area: aside;
+    background-color: rgb(116, 238, 238);
+}
+
+.grid_page4 .form{
+    grid-area: form;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.grid_page4 .footer{
+    grid-area: footer;
+    background-color:rgb(239, 165, 74);
+}
+
+
+
+
+
+
+
+
+
+    /* -------------------------------- MEDIA QUERIES ------------------------------*/
+/* Mi proyecto, estrategia resposive = Mobile Last */
+/* Querys para modificar segun la medida de la pantalla (modelo responsivo) */
+@media (max-width: 900px){
+    .grid_galery{
+        /* hago 4 columnas de dos fraccion */
+         grid-template-columns: repeat(2, 2fr);}
+
+    .container_p1 .box_container{
+         grid-template-columns: repeat(2, 2fr); 
+         grid-template-rows: 270px;
+        }
+    
+    .grid_page3{
+         grid-template-columns: repeat(2, 50%);
+         grid-template-areas: 
+            "img0 img1"
+            "img2 img3"
+            "img4 img5"
+            ;
+        }    
+
+    /* Modificar medida page 4, paso de grid a flex en columna */
+    .grid_page4 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+     }
+}
+
+
+@media (max-width: 600px){
+    /* cambiar el color del fondo del navegador y ubicacion del logo*/
+    .header__logo {
+        justify-content: center;
+        background-color: rgb(243, 136, 230);
+    } 
+
+    /* imagenes del logotipo */
+    .logo_desk {display: none;}
+    .logo_cellphone { 
+        display: block;
+        width: 100px;
+    }
+
+    /* imagenes del banner */
+    .banner_compu { display: none;}
+    .banner_celu { display: block;}
+
+    /* cambiar tamaño de la grilla del index */
+    .grid_container{
+        grid-template-areas: 
+        "section section section section"
+        "article article article article"
+        "aside aside aside aside"
+        "footer footer footer footer"
+        ;
+    }
+
+    /* Cambiar el tamaño de la grilla del catalogo */
+    .container_p1 .box_container{
+        grid-template-columns: repeat(1, 100%); 
+    }
+
+    /* Cambia el tamaño de la grilla de la galeria */
+    .grid_galery{ grid-template-columns: repeat(1, 100%)}
+
+    /* cambiar el tamaño de la grilla blog/page3 */
+    .grid_page3{
+        grid-template-columns: repeat(1, 100%);
+        grid-template-areas: 
+            "img0"
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5"
+        ;
+    }
+    
+
+}
