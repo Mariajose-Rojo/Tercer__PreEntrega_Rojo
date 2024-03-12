@@ -32,10 +32,16 @@
     align-items: center; /* Centra verticalmente el contenido */
     justify-content: center; /* Centra horizontalmente el contenido */
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     h2{
         font-family: $fuente_subtitulo;
     }
+
+    h3{
+        font-family: $fuente_subtitulo;
+    }
+
+    p{ font-size: 1rem;}
 }
 
 .texto_resaltado {

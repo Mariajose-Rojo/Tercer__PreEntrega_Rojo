@@ -14,14 +14,13 @@
     }
 
     .container_p1{
-        background-color: antiquewhite;
         margin-bottom: 1rem;
         padding-bottom: 1rem;
 
         .box_container{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
+            gap: 1.5rem;
             padding-top: 1.5rem;
         }
     }
@@ -35,6 +34,8 @@
     background-color: white;
     text-align: center;
     padding: 30px 20px;
+
+    @extend .texto_centrado_box;
     
     .boton{
         @extend .boton_seleccion;
@@ -44,13 +45,10 @@
         height: 90px;
     }
 
+    
     h3{
         font-size: 22px;
         padding: 10px;
-    }
-
-    p{
-        font-size: 15px;
     }
 }
 

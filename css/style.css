@@ -50,7 +50,7 @@ body {
   font-size: 20px;
   text-align: center; }
 
-.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack {
+.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack, .container_p1 .box_container .box {
   display: flex;
   /* el contenido se alinee correctamente */
   flex-direction: column;
@@ -59,9 +59,13 @@ body {
   justify-content: center;
   /* Centra horizontalmente el contenido */
   text-align: center;
-  padding: 2rem; }
-  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2 {
+  padding: 1rem; }
+  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2, .container_p1 .box_container .box h2 {
     font-family: "Madimi One", sans-serif; }
+  .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .container_p1 .box_container .box h3 {
+    font-family: "Madimi One", sans-serif; }
+  .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .container_p1 .box_container .box p {
+    font-size: 1rem; }
 
 .texto_resaltado, .main_blog .grid_page3 h2 {
   background-color: rgba(0, 0, 0, 0.584);
@@ -183,13 +187,12 @@ body {
   display: flex;
   flex-direction: column; }
   .main_catalogo .container_p1 {
-    background-color: antiquewhite;
     margin-bottom: 1rem;
     padding-bottom: 1rem; }
     .main_catalogo .container_p1 .box_container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
+      gap: 1.5rem;
       padding-top: 1.5rem; }
 
 .container_p1 .box_container .box {
@@ -203,8 +206,6 @@ body {
   .container_p1 .box_container .box h3 {
     font-size: 22px;
     padding: 10px; }
-  .container_p1 .box_container .box p {
-    font-size: 15px; }
 
 /* PSEUDOCLASES: */
 .container_p1 .box_container .box .boton:hover {
