@@ -27,7 +27,7 @@ body {
   position: relative;
   min-height: 100vw; }
 
-.titulo_principal, .main_index .titulo1, .main_catalogo .titulo1 {
+.titulo_principal, .main_index .titulo1, .main_catalogo .titulo1, .main_nosotros .titulo1 {
   font-family: "Mochiy Pop P One", sans-serif;
   font-size: 2.5rem;
   font-weight: 700px;
@@ -213,6 +213,42 @@ body {
 @media (max-width: 600px) {
   /* Cambiar el tamaño de la grilla del catalogo */
   .main_catalogo .container_p1 .box_container {
+    grid-template-columns: repeat(1, 100%); } }
+
+/* ------------------ PAGE 2------------------ */
+/* la clase se puede reciclar para distintas grillas:mantengo el estilo general */
+/* grid con filas y columnas explicitas */
+.main_nosotros .grid_galery {
+  display: grid;
+  /* hago 4 columnas de una fraccion */
+  grid-template-columns: repeat(5, 1fr);
+  /* uso auto-rows porque quiero q todas mis filas midan lo mismo */
+  grid-auto-rows: 400px;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: antiquewhite; }
+  .main_nosotros .grid_galery .grid_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* hacer los bordes redondeados */
+    border-radius: 8px;
+    border: solid 3px #e8ceac;
+    /* hacer que la imagen se ajuste a la medida de mi grilla */
+    background-size: cover;
+    background-position: center; }
+
+/* --------  MEDIA QUERY ----------*/
+/* Estrategia responsive = Mobile Last */
+@media (max-width: 900px) {
+  .main_nosotros .grid_galery {
+    /* hago 4 columnas de dos fraccion */
+    grid-template-columns: repeat(2, 2fr); } }
+
+@media (max-width: 600px) {
+  /*Cambia el tamaño de la grilla de la galeria */
+  .main_nosotros .grid_galery {
     grid-template-columns: repeat(1, 100%); } }
 
 .footer {

@@ -1,0 +1,53 @@
+/* ------------------ PAGE 2------------------ */
+
+/* la clase se puede reciclar para distintas grillas:mantengo el estilo general */
+
+/* grid con filas y columnas explicitas */
+.main_nosotros{
+
+    .titulo1{
+        @extend .titulo_principal;
+    }
+
+    .grid_galery{
+        display: grid; 
+        /* hago 4 columnas de una fraccion */
+        grid-template-columns: repeat(5, 1fr);
+        /* uso auto-rows porque quiero q todas mis filas midan lo mismo */
+        grid-auto-rows: 400px;
+        gap: 1rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background-color:  antiquewhite;
+    
+        .grid_item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            /* hacer los bordes redondeados */
+            border-radius: 8px;
+            border: solid 3px rgb(232, 206, 172);
+            /* hacer que la imagen se ajuste a la medida de mi grilla */
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
+
+    /* --------  MEDIA QUERY ----------*/
+/* Estrategia responsive = Mobile Last */
+@media (max-width: 900px){
+    .main_nosotros .grid_galery{
+        /* hago 4 columnas de dos fraccion */
+         grid-template-columns: repeat(2, 2fr);}
+
+}
+
+
+@media (max-width: 600px){
+    /*Cambia el tamaño de la grilla de la galeria */
+    .main_nosotros .grid_galery{ grid-template-columns: repeat(1, 100%)}
+
+}
