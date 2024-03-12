@@ -1,0 +1,92 @@
+/* ------------------ PAGE 1------------------ */
+
+// trabajo en los contenedores
+.main_catalogo{
+    display: flex;
+    flex-direction: column;
+    
+    .titulo1{
+        @extend .titulo_principal;
+        // text-align: center;
+        // margin-top: 20px;
+        // font-size: 40px;
+        // font-weight: bolder;
+    }
+
+    .container_p1{
+        background-color: antiquewhite;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+
+        .box_container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding-top: 1.5rem;
+        }
+    }
+}
+
+
+// trabajo en las cajas
+.container_p1 .box_container .box{
+    box-shadow: 0 5px 10px rgb(100, 98, 98);
+    border-radius: 6px;
+    background-color: white;
+    text-align: center;
+    padding: 30px 20px;
+    
+    .boton{
+        @extend .boton_seleccion;
+    }
+
+    img{
+        height: 90px;
+    }
+
+    h3{
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+}
+
+
+
+/* PSEUDOCLASES: */
+.container_p1 .box_container .box .boton:hover{
+    background-color: $celeste;
+}
+
+.container_p1 .box_container .box:hover{
+    box-shadow: 0 10px 15px rgb(100, 98, 98) ;
+    transform: scale(1.03);
+}
+
+
+    /* --------  MEDIA QUERY ----------*/
+/* Estrategia responsive = Mobile Last */
+
+@media (max-width: 1000px){
+
+    .main_catalogo{     
+        .container_p1 .box_container{
+             grid-template-columns: repeat(2, 2fr); 
+             grid-template-rows: 270px;
+        }
+    }
+    
+}
+
+
+@media (max-width: 600px){
+
+    /* Cambiar el tamaño de la grilla del catalogo */
+    .main_catalogo .container_p1 .box_container{
+        grid-template-columns: repeat(1, 100%); 
+    }
+
+}
