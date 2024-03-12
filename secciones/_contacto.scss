@@ -1,0 +1,125 @@
+/* ------------------ PAGE 4 ------------------ */
+
+.grid_contacto{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "titulo titulo titulo"
+        "form form aside";
+    
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+
+    .cabecera{
+        grid-area: titulo;
+        background-color: $crema;
+
+        .titulo1{
+            @extend .titulo_principal;
+        }
+
+        p{
+            @extend .parrafo_general;
+        }
+    }
+
+    .apartado{
+        grid-area: aside;
+        background-color: rgb(116, 238, 238);
+        h2{
+            @extend .titulo_secundario;
+        }
+    }
+
+    
+    // ESTILO  DEL FORMULARIO
+    .form{
+        grid-area: form;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    
+        background-color:$verde;
+        // rgb(255, 252, 252);
+        padding: 3rem 2rem;
+        border-radius: 10px;
+        box-shadow: $sombra_box;
+        // 0 5px 10px -5px rgb(0 0 0 /30%)
+
+        gap: 1.5rem;
+
+        .text_form{
+            h2{
+                @extend .titulo_secundario;
+            }
+
+            p{
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+
+
+        .form_container{
+            margin-top: 1rem;
+            display: grid;
+            gap: 1rem;
+
+            .form_group{
+                position: relative;
+                color: rgb(177, 176, 176);
+
+                .form_input{
+                    width: 100%;
+                    font-family:$fuente_general;
+                    // background-color: rgba(127, 255, 212, 0.231);
+                    border-radius: 5px;
+                    border-color:rgb(177, 176, 176) ;
+                    margin-bottom: .5rem;
+                }
+
+            }
+
+            .form_submit{
+                align-items: center;
+                justify-content: center;
+                margin-top: 1rem;
+                @extend .boton_seleccion;
+            }
+        }
+    }
+}
+
+// Pseudoclase para el boton de submit
+.grid_contacto .form .form_container .form_submit:hover{
+    background-color: $celeste;
+}
+
+// .form{
+//     grid-area: form;
+//     background-color: pink;
+//     display: flex;
+    
+//     flex-direction: column;
+//     flex-wrap: wrap;
+// }   
+
+
+    /* --------  MEDIA QUERY ----------*/
+/* Estrategia responsive = Mobile Last */
+@media (max-width: 900px){
+
+    /* Modificar medida page 4, paso de grid a flex en columna */
+    .grid_contacto{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+     }
+}

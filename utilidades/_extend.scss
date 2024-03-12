@@ -7,14 +7,23 @@
     margin-bottom: 20px;
     margin-top: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    background-color:$rosa;
+    padding: 1.5rem 2rem 1.5rem 2rem; 
 }
 
 .titulo_secundario{
     font-family: $fuente_subtitulo;
-    font-size: 1.7rem;
+    text-align: center;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
     padding-left: 1rem;
+}
+
+.parrafo_general{
+    font-size: 20px;
+    text-align: center;
 }
 
 .texto_centrado_box{
@@ -24,6 +33,9 @@
     justify-content: center; /* Centra horizontalmente el contenido */
     text-align: center;
     padding: 2rem;
+    h2{
+        font-family: $fuente_subtitulo;
+    }
 }
 
 .texto_resaltado {

@@ -25,7 +25,10 @@
 
     margin-bottom: 1rem;
     .titulo1{
-        @extend .titulo_principal
+        @extend .titulo_principal;
+        // background-color:$rosa;
+        // padding: 1.5rem 2rem 1.5rem 2rem; 
+        /* arriba, derecha, abajo,izquierda */
     }
 
     .grid_container{
@@ -80,6 +83,9 @@
             .boton{
                 @extend .boton_seleccion;
             }
+            // h2{
+            //     font-family: $fuente_subtitulo;
+            // }
         }
     
         .img_snack{
