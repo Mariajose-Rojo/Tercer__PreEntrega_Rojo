@@ -1,0 +1,36 @@
+@media (max-width: 650px){
+    /* cambiar el color del fondo del navegador y ubicacion del logo*/
+    .header{
+
+        .header__logo {
+            justify-content: center;
+            background-color: rgb(243, 136, 230);
+    
+            /* imagenes del logotipo = para todos*/
+            .logo_desk {display: none;}
+            .logo_cellphone { 
+                display: block;
+                width: 100px;
+            }
+        } 
+    
+        .header__banner{
+            // imagenes del banner = solo del index
+            .banner_compu { display: none;}
+            .banner_celu { display: block;}
+    
+        }
+
+    }
+
+    .footer{
+        .g1_footer{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: 
+            "box1 box2"
+            "box3 box3"
+            ;
+        }
+    }
+
+}

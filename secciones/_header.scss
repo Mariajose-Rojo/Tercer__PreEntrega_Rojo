@@ -1,0 +1,40 @@
+.header{
+    // sombra general
+    box-shadow: 0px 20px 20px #d8d8d8;
+
+    // barra de navegacion con bootstrap =para todos
+    .container-fluid .nav-item a:hover {
+        color: rgb(169, 17, 17);
+        background-color: rgb(108, 191, 243);
+        margin: 2px;
+
+    }
+    
+    // imagenes del logo = para todos
+    .header__logo{
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: rgb(108, 191, 243);
+
+        .logo_desk{
+            width: 220px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+        .logo_cellphone{ display: none;}
+
+    }
+}
+
+
+/* pseudoclase para el navegador = para todos */
+.header .container-fluid .nav-item a:hover {
+    color: rgb(169, 17, 17);
+    background-color: rgb(108, 191, 243);
+    margin: 2px;
+
+}
+
