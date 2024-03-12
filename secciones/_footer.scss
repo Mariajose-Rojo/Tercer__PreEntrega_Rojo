@@ -1,0 +1,96 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color:$naranja ;
+    font-size: 12px;
+    width: 100%;
+    margin: auto;
+    gap: 10px;
+ 
+    .g1_footer{
+        display: flex;
+        align-items: flex-start;
+        justify-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        grid-gap: 1.5rem;
+        width: 100%;
+        padding: 1rem;
+
+        .box{
+            
+            h4{
+                font-size: 20px;
+                text-align: center;
+                color: rgb(255, 255, 255);
+                margin-bottom: 10px;
+                font-weight: 550;
+            }
+
+            ul {
+                list-style-type: none;
+                li a{
+                    font-size: 15px;
+                    text-decoration: none;
+                    color: rgb(255, 247, 247);
+                    display: block;
+                    margin-bottom: 8px;
+                    transition: all .5s ease;
+                }
+            }
+
+            .red_social a {
+                text-decoration: none;
+                display: inline-block;
+                min-height: 40px;
+                width: 40px;
+                background-color: rgba(241, 255, 47, 0.608);
+                margin: 0 10px 10px 0;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                color: white;
+                transition: all .5s ease;
+            }
+        }
+    }
+
+    .g2_footer{
+        align-items: center;
+        p{
+            color: rgb(78, 77, 77);
+        }
+    }
+
+}
+
+/* pseudoclase para el footer = para todos */
+.footer .g1_footer .box a:hover {
+    color:$verde;
+    padding-left: 2px;
+}
+
+.footer .g1_footer .box .red_social a:hover{
+    background-color:$verde;
+}
+
+
+    /* --------  MEDIA QUERY ----------*/
+/* Estrategia responsive = Mobile Last */
+@media (max-width: 640px){
+
+    .footer .g1_footer{
+        justify-content: space-around
+    }
+    /* Cambiar el tamaño de la grilla del catalogo */
+    .main_catalogo .container_p1 .box_container{
+        grid-template-columns: repeat(1, 100%); 
+    }
+
+}
+
