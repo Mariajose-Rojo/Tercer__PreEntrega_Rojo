@@ -95,10 +95,8 @@ body {
   font-size: 20px; }
 
 .boton_seleccion, .main_index .grid_container .texto_top .boton, .main_index .grid_container .texto_ofertas .boton, .main_index .grid_container .texto_snack .boton, .container_p1 .box_container .box .boton, .grid_contacto .form .form_container .form_submit {
-  display: inline-flex;
   font-family: "Madimi One", sans-serif;
   font-size: 16px;
-  font-weight: 300px;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
@@ -234,8 +232,7 @@ body {
 /* Estrategia responsive = Mobile Last */
 @media (max-width: 1000px) {
   .main_catalogo .container_p1 .box_container {
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: 270px; } }
+    grid-template-columns: repeat(2, 2fr); } }
 
 @media (max-width: 600px) {
   /* Cambiar el tamaño de la grilla del catalogo */
