@@ -1,15 +1,44 @@
 
 .titulo_principal{
-    font-family: $fuente_titulo; // Usar la variable para la tipografía
-    font-size: 2.5rem;
-    font-weight: 700px;
+    font-family: $fuente_subtitulo; // Usar la variable para la tipografía
+    font-size: 3rem;
+    // font-weight: 800px;
     text-align: center;
+    color: white;
     margin-bottom: 20px;
-    margin-top: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
+    margin-top: 20px;
+    text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+    // 2px 2px 4px rgba(0, 0, 0, 0.2);
     background-color:$rosa;
     padding: 1.5rem 2rem 1.5rem 2rem; 
+}
+
+.titulo_cabecera{
+    display: flex;
+    flex-direction: column;
+    // background-color:$rosa;
+    padding: 1rem 0rem 1rem 0rem;
+    gap: .5rem;
+    // border: solid 4px $celeste;
+    h1{
+        font-family: $fuente_subtitulo; // Usar la variable para la tipografía
+        font-size: 3rem;
+        text-align: center;
+        color: white;
+        background-color:$rosa;
+        // background-color:rgba(255, 0, 0, 0.294);
+        // border-radius: 10px;
+        padding: 1rem 0rem 1rem 0rem; ;
+        // width: 100%;
+        text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    p{
+        font-size: 18px;
+        text-align: center;
+        // background-color: rgba(255, 255, 255, 0.6);
+        // border-radius: 10px;
+    }
 }
 
 .titulo_secundario{
@@ -54,25 +83,32 @@
 
 .boton_seleccion{
 
-    display: inline-block;
+    // display: inline-block; 
+    display: inline-flex;
+    font-family: $fuente_subtitulo;
     font-size: 16px;
     font-weight: 300px;
+    text-transform: uppercase; //pone todo en mayuscula
     text-align: center;
     text-decoration: none;
     background-color: $rosa;
     color: #333;
-    font-family: $fuente_subtitulo;
 
     padding: 8px 18px;
-    // border: 1px solid #ccc;
     border-radius: 4px;
-
-    cursor: pointer;
-    transition: all 0.3s ease; // Transición suave para la animación
+    border: none;
     box-shadow: $sombra;
+
+    cursor: pointer; //para que seleccione cuando pase el mouse por encima
+    transition:all .5s ease; // Transición suave para la animación
+
+    // genero la pseudoclase:
+    &:hover {
+        background-color: $amarillo;}
 }
 
-// Defino un mixin para las imágenes de fondo, donde paso por parametro el url
+
+// Defino un mixin para las imágenes de fondo, donde paso por parametro el url, lo uso en el index
 @mixin img_fondo($url) {
     background-image: url($url);
     // background-size: cover;
@@ -80,3 +116,17 @@
     background-size: contain; /* Ajusta el tamaño de la imagen para que se ajuste dentro del contenedor */
     background-repeat: no-repeat;
   }
+
+// mixin con dos parametros, url y grid-area .Lo uso en el Blog
+@mixin img_blog ($area, $img){
+    grid-area: ($area);
+    background-image: url($img);
+    background-size: cover;
+    background-position: center;
+    a{
+        text-decoration: none;
+    }
+    h2{
+        @extend .texto_resaltado;
+    }
+}

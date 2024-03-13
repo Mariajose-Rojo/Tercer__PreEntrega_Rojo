@@ -55,10 +55,6 @@
 
 
 /* PSEUDOCLASES: */
-.container_p1 .box_container .box .boton:hover{
-    background-color: $celeste;
-}
-
 .container_p1 .box_container .box:hover{
     box-shadow: 0 10px 15px rgb(100, 98, 98) ;
     transform: scale(1.03);

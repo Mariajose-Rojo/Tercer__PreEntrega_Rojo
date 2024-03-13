@@ -6,8 +6,8 @@
     // align-items: center;
     margin-top: 1rem;
 
-    .titulo1{
-        @extend .titulo_principal;
+    .cabecera{
+        @extend .titulo_cabecera;
     }
     
     .grid_page3{
@@ -59,26 +59,19 @@
         }
         
         .img_3{
-            grid-area: img3;
-            background-color: rgb(61, 61, 227);
+            @include img_blog (img3, 'https://img.freepik.com/vector-gratis/principales-grupos-alimentos-macronutrientes-vector_1308-125587.jpg')
         }
         
         .img_4{
-            grid-area: img4;
-            background-color: rgb(183, 247, 89);
+            @include img_blog (img4, 'https://vitinasrv.com/wp-content/uploads/2021/02/Funciones-del-equipo-de-la-Pasteleria.jpg')
         }
         
         .img_5{
-            grid-area: img5;
-            background-color: pink;
+            @include img_blog (img5, 'https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/4QOXURZZLJB4HEKAQGJNAPRRTQ.jpg')
+           
         }
         
         h2{
-            // color: white;
-            // font-size: x-large;
-            // text-align: center;
-            // padding: 1rem;
-            // text-shadow:  2px 2px 1px rgb(33, 30, 30);
             @extend .texto_resaltado;
         };
     }

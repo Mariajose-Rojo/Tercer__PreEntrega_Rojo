@@ -15,15 +15,15 @@
 
     .cabecera{
         grid-area: titulo;
-        background-color: $crema;
 
-        .titulo1{
-            @extend .titulo_principal;
-        }
+        @extend .titulo_cabecera;
 
-        p{
-            @extend .parrafo_general;
-        }
+        // .titulo1{
+        //      @extend .titulo_principal;}
+
+        // p{
+        //     @extend .parrafo_general;
+        // }
     }
 
     .apartado{
@@ -96,10 +96,6 @@
     }
 }
 
-// Pseudoclase para el boton de submit
-.grid_contacto .form .form_container .form_submit:hover{
-    background-color: $celeste;
-}
 
 // .form{
 //     grid-area: form;
