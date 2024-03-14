@@ -41,18 +41,45 @@
     }
 }
 
+.cabecera_secundaria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0rem 1rem 0rem;
+    gap: .5rem;
+
+    h2{
+        font-family: $fuente_subtitulo;
+        color: white;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color:$rosa;
+        width: 100%;
+    }
+
+    p{
+        font-size: 20px;
+        width: 80%;
+        // text-align: center;
+    }
+}
+
 .titulo_secundario{
     font-family: $fuente_subtitulo;
-    text-align: center;
+    // text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    padding-left: 1rem;
+    padding-left: 20px;
 }
 
 .parrafo_general{
     font-size: 20px;
-    text-align: center;
+    margin: 20px;
+    // text-align: center;
 }
 
 .texto_centrado_box{

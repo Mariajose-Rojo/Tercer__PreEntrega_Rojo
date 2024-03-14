@@ -4,25 +4,72 @@
 
 /* grid con filas y columnas explicitas */
 .main_nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .cabecera{
         @extend .titulo_cabecera;
     }
 
+    // -----DIVISOOOOR--------------
+    .parrafo_e_img{
+        background-image: linear-gradient(to right, rgba(255, 192, 203, 0.927), white);
+        // background-color: aquamarine; //poner degrade
+        display: flex;
+        padding: 30px; 
+        width: 95%;
+        margin: 1rem;
+        border-radius: 8px;
+        box-shadow: $sombra_box;
+
+        .parrafo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                @extend .titulo_secundario
+            }
+
+            p{
+                width: 90%;
+                @extend .parrafo_general;}
+
+            a{ @extend .boton_seleccion;
+                margin-bottom: 20px;
+            }
+        }
+
+        .img{
+            width: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            border: solid 3px rgba(128, 128, 128, 0.647);
+            
+        }
+    }
+
+    // --------------DIVISOR___________________
+
+    .subtitulo{
+        @extend .cabecera_secundaria
+    }
+
     .grid_galery{
-        display: grid; 
+        display: grid;
+        width: 95%; 
         /* hago 4 columnas de una fraccion */
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         /* uso auto-rows porque quiero q todas mis filas midan lo mismo */
         grid-auto-rows: 400px;
         gap: 1rem;
-        padding: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 20px;
     
         .grid_item{
             display: flex;
-            align-items: center;
-            justify-content: center;
+            // align-items: center;
+            // justify-content: center;
         
             /* hacer los bordes redondeados */
             border-radius: 8px;
@@ -45,9 +92,33 @@
 
 }
 
+@media (max-width: 800px){
+    .main_nosotros .grid_parrafo_e_img{
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 
+        "img parrafo parrafo";
+    }
+
+}
+
 
 @media (max-width: 600px){
     /*Cambia el tamaño de la grilla de la galeria */
     .main_nosotros .grid_galery{ grid-template-columns: repeat(1, 100%)}
+
+    .main_nosotros .grid_parrafo_e_img{  
+        // display: flex;
+        // flex-direction: column;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-areas: 
+        "img"
+        "parrafo";
+    }
+
+    .main_nosotros .parrafo_e_img{
+        flex-direction: column;
+        // .grid_parrafo{width: 100%;}
+        .img{ width: 100%;}
+    }
 
 }
