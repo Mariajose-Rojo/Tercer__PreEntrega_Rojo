@@ -51,6 +51,13 @@
             .boton{
                 @extend .boton_seleccion;
             }
+
+            cursor: pointer;
+            transition: all .4s ease;
+            &:hover {
+                box-shadow: 0 5px 10px rgb(86, 74, 189);
+                transform: translateY(-0.5%);
+            }
         }
     
         .img_top{
@@ -68,6 +75,12 @@
             .boton{
                 @extend .boton_seleccion;
             }
+            cursor: pointer;
+            transition: all .4s ease;
+            &:hover {
+                box-shadow: 0 5px 10px rgb(74, 110, 189);
+                transform: translateY(-0.5%);
+            }
         }
     
         .img_ofertas{
@@ -83,9 +96,10 @@
             .boton{
                 @extend .boton_seleccion;
             }
-            // h2{
-            //     font-family: $fuente_subtitulo;
-            // }
+            &:hover {
+                box-shadow: 0 5px 10px rgb(86, 74, 189);
+                transform: translateY(-0.5%);
+            }
         }
     
         .img_snack{

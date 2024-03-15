@@ -14,14 +14,21 @@
 
     // -----DIVISOOOOR--------------
     .parrafo_e_img{
-        background-image: linear-gradient(to right, rgba(255, 192, 203, 0.927), white);
-        // background-color: aquamarine; //poner degrade
+        background-image: linear-gradient(to left, $celeste, white);
+        // rgba(255, 192, 203, 0.927)
         display: flex;
         padding: 30px; 
         width: 95%;
         margin: 1rem;
         border-radius: 8px;
-        box-shadow: $sombra_box;
+        box-shadow: rgba(98, 94, 94, 0.688);
+        cursor: pointer; 
+        transition:all .5s ease;
+
+        &:hover {
+            transform: translateY(-3%);
+            box-shadow: $sombra_box;
+        }
 
         .parrafo{
             display: flex;
@@ -44,8 +51,8 @@
             width: 250px;
             background-size: cover;
             background-position: center;
-            border-radius: 20px;
-            border: solid 3px rgba(128, 128, 128, 0.647);
+            border-radius: 8px;
+            // border: solid 3px rgba(128, 128, 128, 0.647);
             
         }
     }

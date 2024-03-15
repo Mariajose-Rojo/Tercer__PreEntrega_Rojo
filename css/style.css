@@ -25,7 +25,8 @@ body {
   padding: 1rem;
   padding-bottom: 3em;
   position: relative;
-  min-height: 100vw; }
+  min-height: 100vw;
+  height: 100vw; }
 
 .titulo_principal, .main_index .titulo1, .main_catalogo .titulo1 {
   font-family: "Madimi One", sans-serif;
@@ -41,6 +42,7 @@ body {
 .titulo_cabecera, .main_nosotros .cabecera, .main_blog .cabecera, .grid_contacto .cabecera {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 1rem 0rem 1rem 0rem;
   gap: .5rem; }
   .titulo_cabecera h1, .main_nosotros .cabecera h1, .main_blog .cabecera h1, .grid_contacto .cabecera h1 {
@@ -49,11 +51,13 @@ body {
     text-align: center;
     color: white;
     background-color: #f388e6;
+    width: 100%;
     padding: 1rem 0rem 1rem 0rem;
     text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2); }
   .titulo_cabecera p, .main_nosotros .cabecera p, .main_blog .cabecera p, .grid_contacto .cabecera p {
     font-size: 18px;
-    text-align: center; }
+    text-align: center;
+    width: 80%; }
 
 .cabecera_secundaria, .main_nosotros .subtitulo {
   display: flex;
@@ -130,31 +134,42 @@ body {
   .boton_seleccion:hover, .main_index .grid_container .texto_top .boton:hover, .main_index .grid_container .texto_ofertas .boton:hover, .main_index .grid_container .texto_snack .boton:hover, .container_p1 .box_container .box .boton:hover, .main_nosotros .parrafo_e_img .parrafo a:hover, .grid_contacto .form .form_container .form_submit:hover {
     background-color: #fffa60; }
 
-.header {
-  box-shadow: 0px 20px 20px #d8d8d8; }
-  .header .container-fluid .nav-item a:hover {
-    color: #a91111;
-    background-color: #6cbff3;
-    margin: 2px; }
-  .header .header__logo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: #6cbff3; }
-    .header .header__logo .logo_desk {
-      width: 200px;
-      margin-top: 7px;
-      margin-bottom: 7px; }
-    .header .header__logo .logo_cellphone {
-      display: none; }
+.header .container-fluid {
+  box-shadow: 0px 5px 5px 0px #e2e0e0;
+  width: 100%; }
+  .header .container-fluid .navbar-brand {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    margin: 10px; }
+  .header .container-fluid .nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    transition: all .4s ease;
+    margin: 10px; }
+    .header .container-fluid .nav-item a:hover {
+      color: #6cbff3;
+      font-weight: bold;
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+      text-underline-offset: 10px;
+      transform: translateY(-2%); }
+
+.header .header__logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #6cbff3; }
+  .header .header__logo .logo_desk {
+    width: 200px;
+    margin-top: 7px;
+    margin-bottom: 7px; }
+  .header .header__logo .logo_cellphone {
+    display: none; }
 
 /* pseudoclase para el navegador = para todos */
-.header .container-fluid .nav-item a:hover {
-  color: #a91111;
-  background-color: #6cbff3;
-  margin: 2px; }
-
 /* -----------------------INDEX--------------------------- */
 /* ------------------- HEADER (logo, lista navegacion y banner) -------------------*/
 /* 1) Logo */
@@ -179,7 +194,12 @@ body {
     margin-top: 1rem; }
     .main_index .grid_container .texto_top {
       grid-area: section1;
-      background-color: #86EACC; }
+      background-color: #86EACC;
+      cursor: pointer;
+      transition: all .4s ease; }
+      .main_index .grid_container .texto_top:hover {
+        box-shadow: 0 5px 10px #564abd;
+        transform: translateY(-0.5%); }
     .main_index .grid_container .img_top {
       grid-area: img_top;
       background-color: #fffa60;
@@ -190,7 +210,12 @@ body {
       background-repeat: no-repeat; }
     .main_index .grid_container .texto_ofertas {
       grid-area: section2;
-      background-color: #86EACC; }
+      background-color: #86EACC;
+      cursor: pointer;
+      transition: all .4s ease; }
+      .main_index .grid_container .texto_ofertas:hover {
+        box-shadow: 0 5px 10px #4a6ebd;
+        transform: translateY(-0.5%); }
     .main_index .grid_container .img_ofertas {
       grid-area: img_oferta;
       background-color: #f388e6;
@@ -202,6 +227,9 @@ body {
     .main_index .grid_container .texto_snack {
       grid-area: section3;
       background-color: #86EACC; }
+      .main_index .grid_container .texto_snack:hover {
+        box-shadow: 0 5px 10px #564abd;
+        transform: translateY(-0.5%); }
     .main_index .grid_container .img_snack {
       grid-area: img_snack;
       background-color: #fffa60;
@@ -231,11 +259,16 @@ body {
       padding-top: 1.5rem; }
 
 .container_p1 .box_container .box {
-  box-shadow: 0 5px 10px #646262;
+  box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
   border-radius: 6px;
   background-color: white;
   text-align: center;
-  padding: 30px 20px; }
+  padding: 30px 20px;
+  cursor: pointer;
+  transition: all .4s ease; }
+  .container_p1 .box_container .box:hover {
+    box-shadow: 0 5px 10px #616060;
+    transform: scale(1.03); }
   .container_p1 .box_container .box img {
     height: 90px; }
   .container_p1 .box_container .box h3 {
@@ -243,10 +276,6 @@ body {
     padding: 10px; }
 
 /* PSEUDOCLASES: */
-.container_p1 .box_container .box:hover {
-  box-shadow: 0 10px 15px #646262;
-  transform: scale(1.03); }
-
 /* --------  MEDIA QUERY ----------*/
 /* Estrategia responsive = Mobile Last */
 @media (max-width: 1000px) {
@@ -266,13 +295,18 @@ body {
   flex-direction: column;
   align-items: center; }
   .main_nosotros .parrafo_e_img {
-    background-image: linear-gradient(to right, rgba(255, 192, 203, 0.927), white);
+    background-image: linear-gradient(to left, #6cbff3, white);
     display: flex;
     padding: 30px;
     width: 95%;
     margin: 1rem;
     border-radius: 8px;
-    box-shadow: -1px 2px 15px 0px #646262; }
+    box-shadow: rgba(98, 94, 94, 0.688);
+    cursor: pointer;
+    transition: all .5s ease; }
+    .main_nosotros .parrafo_e_img:hover {
+      transform: translateY(-3%);
+      box-shadow: -1px 2px 15px 0px #646262; }
     .main_nosotros .parrafo_e_img .parrafo {
       display: flex;
       flex-direction: column;
@@ -285,8 +319,7 @@ body {
       width: 250px;
       background-size: cover;
       background-position: center;
-      border-radius: 20px;
-      border: solid 3px rgba(128, 128, 128, 0.647); }
+      border-radius: 8px; }
   .main_nosotros .grid_galery {
     display: grid;
     width: 95%;
