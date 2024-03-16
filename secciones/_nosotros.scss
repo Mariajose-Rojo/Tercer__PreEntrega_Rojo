@@ -87,6 +87,33 @@
             background-position: center;
         }
     }
+
+    // -----------------DIVISOR cartas de empleados-------------
+    .cards_empleados_container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 95%;
+
+        .card{
+            // height: 400px;
+            margin: 2rem 0 2rem 0;
+            border-radius: 8px;
+
+            .card_img{
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+
+            .card_body{
+                margin: 1rem;
+                @extend .texto_centrado_box
+            }
+        }
+
+    }
 }
 
 

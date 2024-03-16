@@ -10,11 +10,10 @@
 
     // }
 
-    // <nav class="navbar navbar-expand-lg bg-body-tertiary">
     .container-fluid {
         box-shadow: 0px 5px 5px 0px #e2e0e0;
         width: 100%;
-        // margin-bottom: 2rem;
+
         .navbar-brand{
             padding-left: 1rem;
             padding-right: 1rem;
@@ -35,8 +34,9 @@
                 text-decoration: underline;
                 text-decoration-thickness: 4px;
                 text-underline-offset: 10px;
-                // text-shadow:  0px 5px 5px 0px #4c7cf5;
+                background-color: rgb(255, 255, 255);
                 transform: translateY(-2%);
+                // text-shadow:  0px 5px 5px 0px #4c7cf5;
              //    transform: translateY(-3%);
              }
     

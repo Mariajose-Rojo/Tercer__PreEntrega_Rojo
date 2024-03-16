@@ -26,12 +26,14 @@ body {
   padding-bottom: 3em;
   position: relative;
   min-height: 100vw;
+  background-color: #e0f1ff;
   height: 100vw; }
 
 .titulo_principal, .main_index .titulo1, .main_catalogo .titulo1 {
   font-family: "Madimi One", sans-serif;
   font-size: 3rem;
   text-align: center;
+  width: 100%;
   color: white;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -90,7 +92,7 @@ body {
   font-size: 20px;
   margin: 20px; }
 
-.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack, .container_p1 .box_container .box {
+.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack, .container_p1 .box_container .box, .main_nosotros .cards_empleados_container .card .card_body {
   display: flex;
   /* el contenido se alinee correctamente */
   flex-direction: column;
@@ -100,11 +102,11 @@ body {
   /* Centra horizontalmente el contenido */
   text-align: center;
   padding: 1rem; }
-  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2, .container_p1 .box_container .box h2 {
+  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2, .container_p1 .box_container .box h2, .main_nosotros .cards_empleados_container .card .card_body h2 {
     font-family: "Madimi One", sans-serif; }
-  .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .container_p1 .box_container .box h3 {
+  .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .container_p1 .box_container .box h3, .main_nosotros .cards_empleados_container .card .card_body h3 {
     font-family: "Madimi One", sans-serif; }
-  .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .container_p1 .box_container .box p {
+  .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .container_p1 .box_container .box p, .main_nosotros .cards_empleados_container .card .card_body p {
     font-size: 1rem; }
 
 .texto_resaltado, .main_blog .grid_page3 .img_3 h2, .main_blog .grid_page3 .img_4 h2, .main_blog .grid_page3 .img_5 h2, .main_blog .grid_page3 h2 {
@@ -134,6 +136,23 @@ body {
   .boton_seleccion:hover, .main_index .grid_container .texto_top .boton:hover, .main_index .grid_container .texto_ofertas .boton:hover, .main_index .grid_container .texto_snack .boton:hover, .container_p1 .box_container .box .boton:hover, .main_nosotros .parrafo_e_img .parrafo a:hover, .grid_contacto .form .form_container .form_submit:hover {
     background-color: #fffa60; }
 
+.boton_banner, .d-item .boton {
+  font-family: "Madimi One", sans-serif;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f388e6;
+  color: #333;
+  padding: 10px 25px 10px 25px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all .5s ease; }
+  .boton_banner:hover, .d-item .boton:hover {
+    background-color: rgba(255, 255, 255, 0.542); }
+
 .header .container-fluid {
   box-shadow: 0px 5px 5px 0px #e2e0e0;
   width: 100%; }
@@ -154,6 +173,7 @@ body {
       text-decoration: underline;
       text-decoration-thickness: 4px;
       text-underline-offset: 10px;
+      background-color: white;
       transform: translateY(-2%); }
 
 .header .header__logo {
@@ -179,6 +199,15 @@ body {
 
 .header .header__banner .banner_celu {
   display: none; }
+
+.d-item {
+  height: 600px; }
+  .d-item .d-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); }
+  .d-item .boton {
+    margin: 3rem; }
 
 /* -------------------------- GRILLAS -------------------------- */
 .main_index {
@@ -248,10 +277,12 @@ body {
 /* ------------------ PAGE 1------------------ */
 .main_catalogo {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   .main_catalogo .container_p1 {
     margin-bottom: 1rem;
-    padding-bottom: 1rem; }
+    padding-bottom: 1rem;
+    width: 95%; }
     .main_catalogo .container_p1 .box_container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -338,6 +369,21 @@ body {
       /* hacer que la imagen se ajuste a la medida de mi grilla */
       background-size: cover;
       background-position: center; }
+  .main_nosotros .cards_empleados_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 95%; }
+    .main_nosotros .cards_empleados_container .card {
+      margin: 2rem 0 2rem 0;
+      border-radius: 8px; }
+      .main_nosotros .cards_empleados_container .card .card_img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px; }
+      .main_nosotros .cards_empleados_container .card .card_body {
+        margin: 1rem; }
 
 /* --------  MEDIA QUERY ----------*/
 /* Estrategia responsive = Mobile Last */

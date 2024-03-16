@@ -4,6 +4,7 @@
     font-size: 3rem;
     // font-weight: 800px;
     text-align: center;
+    width: 100%;
     color: white;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -136,6 +137,32 @@
         background-color: $amarillo;}
 }
 
+.boton_banner{
+
+    // display: inline-block; 
+    // display: inline-flex;
+    font-family: $fuente_subtitulo;
+    font-size: 20px;
+    text-transform: capitalize; //pone todo en mayuscula
+    text-align: center;
+    text-decoration: none;
+    background-color: $rosa;
+    color: #333;
+
+    padding: 10px 25px 10px 25px;
+    // arriba, derecha, abajo, izq
+    border-radius: 4px;
+    border: none;
+    box-shadow: $sombra;
+
+    cursor: pointer; //para que seleccione cuando pase el mouse por encima
+    transition:all .5s ease; // Transición suave para la animación
+
+    // genero la pseudoclase:
+    &:hover {
+        background-color:rgba(255, 255, 255, 0.542);
+    }
+}
 
 // Defino un mixin para las imágenes de fondo, donde paso por parametro el url, lo uso en el index
 @mixin img_fondo($url) {
