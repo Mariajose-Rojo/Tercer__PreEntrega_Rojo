@@ -35,8 +35,6 @@ body {
   text-align: center;
   width: 100%;
   color: white;
-  margin-bottom: 20px;
-  margin-top: 20px;
   text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
   background-color: #f388e6;
   padding: 1.5rem 2rem 1.5rem 2rem; }
@@ -112,10 +110,10 @@ body {
     padding-bottom: 1rem; }
   .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .main_catalogo .container_p1 .box_container .box h3, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h3, .main_nosotros .cards_empleados_container .card .card_body h3 {
     font-family: "Madimi One", sans-serif;
-    font-size: 22px;
+    font-size: 26px;
     padding: 10px; }
   .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .main_catalogo .container_p1 .box_container .box p, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo p, .main_nosotros .cards_empleados_container .card .card_body p {
-    font-size: 1rem;
+    font-size: 20px;
     width: 80%; }
 
 .texto_resaltado, .main_blog .grid_page3 .img_3 h2, .main_blog .grid_page3 .img_4 h2, .main_blog .grid_page3 .img_5 h2, .main_blog .grid_page3 h2 {

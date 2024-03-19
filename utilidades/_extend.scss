@@ -6,8 +6,8 @@
     text-align: center;
     width: 100%;
     color: white;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    // margin-bottom: 20px;
+    // margin-top: 20px;
     text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
     // 2px 2px 4px rgba(0, 0, 0, 0.2);
     background-color:$rosa;
@@ -104,11 +104,12 @@
 
     h3{
         font-family: $fuente_subtitulo;
-        font-size: 22px;
+        font-size: 26px;
         padding: 10px;
     }
 
-    p{ font-size: 1rem;
+    p{ font-size: 20px;
+        // font-weight: 550;
         width: 80%;
     }
 }
