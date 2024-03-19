@@ -6,13 +6,7 @@
     flex-direction: column;
     align-items: center;
     
-    .titulo1{
-        @extend .titulo_principal;
-        // text-align: center;
-        // margin-top: 20px;
-        // font-size: 40px;
-        // font-weight: bolder;
-    }
+    .titulo1 { @extend .titulo_principal;}
 
     .container_p1{
         margin-bottom: 1rem;
@@ -24,50 +18,124 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             padding-top: 1.5rem;
+
+            // trabajo en las cajas
+            .box{
+                box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+                border-radius: 6px;
+                background-color: white;
+                text-align: center;
+                padding: 30px 20px;
+                cursor: pointer;
+                transition: all .4s ease;
+            
+                &:hover {
+                    box-shadow: 0 5px 10px rgb(86, 74, 189); //rgb(97, 96, 96)
+                    transform: scale(1.03);
+                }
+            
+                @extend .texto_centrado_box;
+                
+                .boton{
+                    @extend .boton_seleccion;
+                }
+            
+                img{
+                    height: 90px;
+                }
+            }
         }
     }
+
+
+    // Catalogo: PROMOS PAQUETES
+    
+
+    .promociones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // width: 95%;
+        margin-bottom: 2rem;
+        .subtitulo{
+            @extend .cabecera_secundaria;
+            // background-color:$rosa;
+            // width: 100%;
+        }
+
+        .container_promo_grid{
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+            // grid-auto-rows: 350px;
+            // gap: 1.5rem;
+            width: 95%;
+    
+            .grid_card{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                border-radius: 8px;
+                // width: 800px;
+                // height: 300px;
+                background-color:white ;
+                //padding: 30px; 
+                
+                margin: 1rem;
+                box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+                cursor: pointer; 
+                transition:all .5s ease;
+        
+                &:hover {
+                    transform: scale(1.03);
+                    box-shadow: 0 5px 10px rgb(86, 74, 189);
+                }
+        
+                .parrafo{
+                    height: 100%;
+                    display: flex; /* el contenido se alinee correctamente */
+                    flex-direction: column; 
+                    align-items: center; /* Centra verticalmente el contenido */
+                    justify-content: center; 
+                    text-align: center;
+                    padding: 1.5rem;
+    
+                    background-color: white;
+                    border-radius: 8px;
+                    
+                    @extend .texto_centrado_box;
+        
+                    .boton{ @extend .boton_seleccion;
+                        // margin-bottom: 20px;
+                    }
+                }
+        
+                .img{
+                    background-color: $verde;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    img{
+                        width: 250px;
+                        // height: 100%;
+                        // background-size: cover;
+                        background-position: center;
+                        background-size: cover;
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+
+
+
 }
 
 
-// trabajo en las cajas
-.container_p1 .box_container .box{
-    box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
-    border-radius: 6px;
-    background-color: white;
-    text-align: center;
-    padding: 30px 20px;
-    cursor: pointer;
-    transition: all .4s ease;
-
-    &:hover {
-        box-shadow: 0 5px 10px rgb(97, 96, 96);
-        transform: scale(1.03);
-    }
-
-    @extend .texto_centrado_box;
-    
-    .boton{
-        @extend .boton_seleccion;
-    }
-
-    img{
-        height: 90px;
-    }
-
-    
-    h3{
-        font-size: 22px;
-        padding: 10px;
-    }
-}
 
 
-
-/* PSEUDOCLASES: */
-// .container_p1 .box_container .box:hover{
-//     box-shadow: 0 10px 15px rgb(100, 98, 98) ;
-//     transform: scale(1.03);
-// }
 
 
     /* --------  MEDIA QUERY ----------*/
@@ -84,12 +152,30 @@
     
 }
 
+@media (max-width: 1300px){
 
-@media (max-width: 600px){
+    .main_catalogo .promociones{     
+        .container_promo_grid .grid_card{
+             grid-template-columns: repeat(1, 1fr); 
+            //  grid-template-rows: 320px;
+        }
+    }
+    
+}
+
+
+@media (max-width: 640px){
 
     /* Cambiar el tamaño de la grilla del catalogo */
     .main_catalogo .container_p1 .box_container{
         grid-template-columns: repeat(1, 100%); 
+    }
+
+    .main_catalogo .promociones{     
+        .container_promo_grid {
+             grid-template-columns: repeat(1, 1fr); 
+            //  grid-template-rows: 320px;
+        }
     }
 
 }

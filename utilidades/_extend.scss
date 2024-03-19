@@ -51,6 +51,7 @@
     align-items: center;
     padding: 1rem 0rem 1rem 0rem;
     gap: .5rem;
+    width: 100%;
 
     h2{
         font-family: $fuente_subtitulo;
@@ -62,12 +63,14 @@
         padding: 1rem;
         background-color:$rosa;
         width: 100%;
+        text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
     }
 
     p{
-        font-size: 20px;
+        font-size: 22px;
+        font-weight: bold;
         width: 80%;
-        // text-align: center;
+        text-align: center;
     }
 }
 
@@ -93,15 +96,21 @@
     justify-content: center; /* Centra horizontalmente el contenido */
     text-align: center;
     padding: 1rem;
+    margin-bottom: 1.5rem;
     h2{
         font-family: $fuente_subtitulo;
+        padding-bottom: 1rem;
     }
 
     h3{
         font-family: $fuente_subtitulo;
+        font-size: 22px;
+        padding: 10px;
     }
 
-    p{ font-size: 1rem;}
+    p{ font-size: 1rem;
+        width: 80%;
+    }
 }
 
 .texto_resaltado {
@@ -163,6 +172,8 @@
         background-color:rgba(255, 255, 255, 0.542);
     }
 }
+
+
 
 // Defino un mixin para las imágenes de fondo, donde paso por parametro el url, lo uso en el index
 @mixin img_fondo($url) {

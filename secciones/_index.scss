@@ -62,6 +62,7 @@
         .texto_top {
             grid-area: section1;
             background-color:$verde;
+            height: 100%;
             @extend .texto_centrado_box;
             .boton{
                 @extend .boton_seleccion;
@@ -86,6 +87,7 @@
         .texto_ofertas{
             grid-area: section2;
             background-color: $verde;
+            height: 100%;
             @extend .texto_centrado_box;
             .boton{
                 @extend .boton_seleccion;
@@ -107,6 +109,7 @@
         .texto_snack {
             grid-area: section3;
             background-color: $verde;
+            height: 100%;
             @extend .texto_centrado_box;
             .boton{
                 @extend .boton_seleccion;
