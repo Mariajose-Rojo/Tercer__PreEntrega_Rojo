@@ -100,7 +100,9 @@
         .img_ofertas{
             grid-area: img_oferta;
             background-color:$rosa; 
-            @include img_fondo('https://supermaterias.com/cdn/shop/files/Caja-para-6-donas_b1212d1b-a967-4446-87eb-842341970068_1050x700.png?v=1687315039');
+            @include img_fondo('https://dunkin.pe/_ipx/f_png,q_75,s_1920x1920/https://s3-dunkin-pro.s3.amazonaws.com/media/catalog/product/5/7/5702-dd-nuevo-2024.png');
+            //https://supermaterias.com/cdn/shop/files/Caja-para-6-donas_b1212d1b-a967-4446-87eb-842341970068_1050x700.png?v=1687315039
+            //https://dunkin.pe/_ipx/f_png,q_75,s_1920x1920/https://s3-dunkin-pro.s3.amazonaws.com/media/catalog/product/5/7/5702-dd-nuevo-2024.png
             // https://dunkindonuts12.files.wordpress.com/2019/06/745x420-menu.png
         }
 

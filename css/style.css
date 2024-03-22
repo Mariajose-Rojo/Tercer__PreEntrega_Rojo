@@ -132,8 +132,7 @@ body {
     padding: 12px 8px 12px 8px;
     color: white;
     background-color: #6cbff3;
-    width: 100%;
-    border: solid #585858 2px; }
+    width: 100%; }
   .texto_card_empleado p, .main_nosotros .cards_empleados_container .card .card_body p {
     font-size: 15px;
     width: 90%;
@@ -292,7 +291,7 @@ body {
     .main_index .grid_container .img_ofertas {
       grid-area: img_oferta;
       background-color: #f388e6;
-      background-image: url("https://supermaterias.com/cdn/shop/files/Caja-para-6-donas_b1212d1b-a967-4446-87eb-842341970068_1050x700.png?v=1687315039");
+      background-image: url("https://dunkin.pe/_ipx/f_png,q_75,s_1920x1920/https://s3-dunkin-pro.s3.amazonaws.com/media/catalog/product/5/7/5702-dd-nuevo-2024.png");
       background-position: center;
       background-size: contain;
       /* Ajusta el tamaño de la imagen para que se ajuste dentro del contenedor */
@@ -421,11 +420,11 @@ body {
     display: flex;
     width: 90%;
     margin: 1rem;
-    border-radius: 8px;
+    border-radius: 1rem;
     cursor: pointer;
     transition: all .5s ease; }
     .main_nosotros .parrafo_e_img:hover {
-      transform: translateY(-4%);
+      transform: translateY(-3%);
       box-shadow: -1px 2px 15px 0px #564abd; }
     .main_nosotros .parrafo_e_img .parrafo {
       display: flex;
@@ -439,7 +438,8 @@ body {
       width: 330px;
       background-size: cover;
       background-position: center;
-      border-radius: 8px; }
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem; }
   .main_nosotros .cards_empleados_container {
     display: flex;
     flex-direction: row;
@@ -450,7 +450,7 @@ body {
     .main_nosotros .cards_empleados_container .card {
       display: flex;
       margin: 1rem 0 1rem 0;
-      border-radius: 8px;
+      border-radius: 1rem;
       width: 450px;
       box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
       transition: transform 0.3s ease; }
@@ -489,7 +489,7 @@ body {
     margin-bottom: 2rem; }
     .main_blog .grid_page3 .img_0 {
       grid-area: img0;
-      background-image: url("https://algunwey.com/wp-content/uploads/2018/07/curiosidades-donas-origen-historia.jpg");
+      background-image: url("https://www.newsnationnow.com/wp-content/uploads/sites/108/2022/05/DoughnutLassiesSalvationArmyUSA.png?w=900");
       background-size: cover;
       background-position: center;
       box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
@@ -554,7 +554,7 @@ body {
         text-decoration: none; }
     .main_blog .grid_page3 .img_5 {
       grid-area: img5;
-      background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/4QOXURZZLJB4HEKAQGJNAPRRTQ.jpg");
+      background-image: url("https://img.freepik.com/free-photo/view-delicious-glazed-donuts_23-2150757635.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1700352000&semt=ais");
       background-size: cover;
       background-position: center;
       box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
@@ -579,8 +579,8 @@ body {
     grid-template-columns: repeat(4, 1fr);
     /* uso auto-rows porque quiero q todas mis filas midan lo mismo */
     grid-auto-rows: 400px;
-    gap: 1rem;
-    margin-bottom: 20px; }
+    gap: 1.3rem;
+    margin-bottom: 2rem; }
     .main_blog .grid_galery .grid_item {
       display: flex;
       /* hacer los bordes redondeados */
@@ -704,7 +704,7 @@ body {
         cursor: pointer;
         transition: all .5s ease; }
         .main_contacto .promociones .container_promo_grid .grid_card:hover {
-          transform: scale(0.5);
+          transform: scale(1.02);
           box-shadow: 0 5px 10px #564abd; }
         .main_contacto .promociones .container_promo_grid .grid_card .parrafo {
           height: 100%;

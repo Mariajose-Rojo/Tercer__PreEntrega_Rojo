@@ -16,20 +16,17 @@
     .parrafo_e_img{
         background-color: white;
         box-shadow: 0 5px 10px rgba(82, 80, 80, 0.679);
-        // background-image: linear-gradient(to bottom, rgb(255, 226, 231)
-        // , white);
-        // rgba(255, 192, 203, 0.927)
         display: flex;
         // padding: 1rem; 
         width: 90%;
         margin: 1rem;
-        border-radius: 8px;
+        border-radius: 1rem;
         
         cursor: pointer; 
         transition:all .5s ease;
 
         &:hover {
-            transform: translateY(-4%);
+            transform: translateY(-3%);
             // box-shadow:  0 5px 10px rgb(86, 74, 189);
             box-shadow: $sombra_box;
         }
@@ -55,8 +52,8 @@
             width: 330px;
             background-size: cover;
             background-position: center;
-            border-radius: 8px;
-            // border: solid 3px rgba(128, 128, 128, 0.647);
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
             
         }
     }
@@ -83,16 +80,16 @@
         .card{
             display: flex;
             margin: 1rem 0 1rem 0;
-            border-radius: 8px;
+            border-radius: 1rem;
             width: 450px;
             box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
             transition: transform 0.3s ease;
 
             &:hover {
-                // transform: translateX(10px); /* Mueve la tarjeta 10px hacia la derecha */
                 transform: scale(1.02);
             }
 
+            
             .card_img{
                 // border-top-left-radius: 8px;
                 // border-top-right-radius: 8px;
