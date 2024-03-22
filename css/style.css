@@ -60,14 +60,14 @@ body {
     width: 80%;
     text-align: center; }
 
-.cabecera_secundaria, .main_catalogo .promociones .subtitulo, .main_nosotros .subtitulo, .main_blog .text_subtitulo {
+.cabecera_secundaria, .main_catalogo .promociones .subtitulo, .main_nosotros .subtitulo, .main_blog .text_subtitulo, .main_contacto .promociones .subtitulo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem 0rem 1rem 0rem;
   gap: .5rem;
   width: 100%; }
-  .cabecera_secundaria h2, .main_catalogo .promociones .subtitulo h2, .main_nosotros .subtitulo h2, .main_blog .text_subtitulo h2 {
+  .cabecera_secundaria h2, .main_catalogo .promociones .subtitulo h2, .main_nosotros .subtitulo h2, .main_blog .text_subtitulo h2, .main_contacto .promociones .subtitulo h2 {
     font-family: "Madimi One", sans-serif;
     color: white;
     text-align: center;
@@ -78,7 +78,7 @@ body {
     background-color: #f388e6;
     width: 100%;
     text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2); }
-  .cabecera_secundaria p, .main_catalogo .promociones .subtitulo p, .main_nosotros .subtitulo p, .main_blog .text_subtitulo p {
+  .cabecera_secundaria p, .main_catalogo .promociones .subtitulo p, .main_nosotros .subtitulo p, .main_blog .text_subtitulo p, .main_contacto .promociones .subtitulo p {
     font-size: 22px;
     font-weight: bold;
     width: 80%;
@@ -98,7 +98,7 @@ body {
   width: 80%;
   text-align: center; }
 
-.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack, .main_catalogo .container_p1 .box_container .box, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo, .main_contacto .container_form .information .form_texto, .main_contacto .container_form .information .form_formulario .form_formulario_text {
+.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack, .main_catalogo .container_p1 .box_container .box, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo, .main_contacto .container_form .information .form_texto, .main_contacto .container_form .information .form_formulario .form_formulario_text, .main_contacto .promociones .container_promo_grid .grid_card .parrafo {
   display: flex;
   /* el contenido se alinee correctamente */
   flex-direction: column;
@@ -109,14 +109,14 @@ body {
   text-align: center;
   padding: 1rem;
   margin-bottom: 1.5rem; }
-  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2, .main_catalogo .container_p1 .box_container .box h2, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h2, .main_contacto .container_form .information .form_texto h2, .main_contacto .container_form .information .form_formulario .form_formulario_text h2 {
+  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2, .main_catalogo .container_p1 .box_container .box h2, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h2, .main_contacto .container_form .information .form_texto h2, .main_contacto .container_form .information .form_formulario .form_formulario_text h2, .main_contacto .promociones .container_promo_grid .grid_card .parrafo h2 {
     font-family: "Madimi One", sans-serif;
     padding-bottom: 12px; }
-  .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .main_catalogo .container_p1 .box_container .box h3, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h3, .main_contacto .container_form .information .form_texto h3, .main_contacto .container_form .information .form_formulario .form_formulario_text h3 {
+  .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .main_catalogo .container_p1 .box_container .box h3, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h3, .main_contacto .container_form .information .form_texto h3, .main_contacto .container_form .information .form_formulario .form_formulario_text h3, .main_contacto .promociones .container_promo_grid .grid_card .parrafo h3 {
     font-family: "Madimi One", sans-serif;
     font-size: 26px;
     padding: 10px; }
-  .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .main_catalogo .container_p1 .box_container .box p, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo p, .main_contacto .container_form .information .form_texto p, .main_contacto .container_form .information .form_formulario .form_formulario_text p {
+  .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .main_catalogo .container_p1 .box_container .box p, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo p, .main_contacto .container_form .information .form_texto p, .main_contacto .container_form .information .form_formulario .form_formulario_text p, .main_contacto .promociones .container_promo_grid .grid_card .parrafo p {
     font-size: 20px;
     width: 80%; }
 
@@ -149,7 +149,7 @@ body {
   text-align: center;
   font-size: 24px; }
 
-.boton_seleccion, .main_index .grid_container .texto_top .boton, .main_index .grid_container .texto_ofertas .boton, .main_index .grid_container .texto_snack .boton, .main_catalogo .container_p1 .box_container .box .boton, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo .boton, .main_nosotros .parrafo_e_img .parrafo a, .main_contacto .container_form .information .form_formulario .form_labels .boton {
+.boton_seleccion, .main_index .grid_container .texto_top .boton, .main_index .grid_container .texto_ofertas .boton, .main_index .grid_container .texto_snack .boton, .main_catalogo .container_p1 .box_container .box .boton, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo .boton, .main_nosotros .parrafo_e_img .parrafo a, .main_contacto .container_form .information .form_formulario .form_labels .boton, .main_contacto .promociones .container_promo_grid .grid_card .parrafo .boton {
   font-family: "Madimi One", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
@@ -163,7 +163,7 @@ body {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all .5s ease; }
-  .boton_seleccion:hover, .main_index .grid_container .texto_top .boton:hover, .main_index .grid_container .texto_ofertas .boton:hover, .main_index .grid_container .texto_snack .boton:hover, .main_catalogo .container_p1 .box_container .box .boton:hover, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo .boton:hover, .main_nosotros .parrafo_e_img .parrafo a:hover, .main_contacto .container_form .information .form_formulario .form_labels .boton:hover {
+  .boton_seleccion:hover, .main_index .grid_container .texto_top .boton:hover, .main_index .grid_container .texto_ofertas .boton:hover, .main_index .grid_container .texto_snack .boton:hover, .main_catalogo .container_p1 .box_container .box .boton:hover, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo .boton:hover, .main_nosotros .parrafo_e_img .parrafo a:hover, .main_contacto .container_form .information .form_formulario .form_labels .boton:hover, .main_contacto .promociones .container_promo_grid .grid_card .parrafo .boton:hover {
     background-color: #fffa60; }
 
 .boton_banner, .d-item .boton {
@@ -617,32 +617,37 @@ body {
   align-items: center;
   justify-content: center; }
   .main_contacto .container_form {
-    max-width: 900px;
+    max-width: 1200px;
+    height: auto;
     border-radius: 20px;
     margin: 1rem;
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
-    transition: all 1s ease; }
+    transition: all 1s ease;
+    background-color: #fef5f5;
+    cursor: pointer;
+    transition: all .5s ease; }
+    .main_contacto .container_form:hover {
+      box-shadow: 0 5px 10px #564abd; }
     .main_contacto .container_form .information {
       display: flex;
-      width: 100%; }
+      flex-direction: column;
+      width: 100%;
+      height: auto; }
       .main_contacto .container_form .information .form_texto {
-        width: 40%;
-        padding: 1rem;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
         border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
         background-color: #86EACC; }
         .main_contacto .container_form .information .form_texto h2 {
           font-size: 3rem; }
       .main_contacto .container_form .information .form_formulario {
-        width: 60%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        height: auto;
         padding: 1rem;
         background-color: #fef5f5;
-        background-size: contain;
-        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px; }
         .main_contacto .container_form .information .form_formulario .form_formulario_text h2 {
           font-size: 2.5rem; }
@@ -655,7 +660,7 @@ body {
             border-radius: 50%;
             padding: 15%;
             box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-            background-color: rgba(255, 255, 0, 0.405);
+            background-color: pink;
             color: #333;
             cursor: pointer;
             border: solid thin #f388e6;
@@ -680,22 +685,60 @@ body {
               border: none;
               outline: none;
               color: #333; }
+  .main_contacto .promociones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; }
+    .main_contacto .promociones .container_promo_grid {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      width: 95%; }
+      .main_contacto .promociones .container_promo_grid .grid_card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 8px;
+        background-color: white;
+        margin: 1rem;
+        box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+        cursor: pointer;
+        transition: all .5s ease; }
+        .main_contacto .promociones .container_promo_grid .grid_card:hover {
+          transform: scale(0.5);
+          box-shadow: 0 5px 10px #564abd; }
+        .main_contacto .promociones .container_promo_grid .grid_card .parrafo {
+          height: 100%;
+          display: flex;
+          /* el contenido se alinee correctamente */
+          flex-direction: column;
+          align-items: center;
+          /* Centra verticalmente el contenido */
+          justify-content: center;
+          text-align: center;
+          padding: 1.5rem;
+          background-color: white;
+          border-radius: 8px; }
+        .main_contacto .promociones .container_promo_grid .grid_card .img {
+          background-color: #86EACC;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          border-radius: 8px;
+          padding: 1rem; }
+          .main_contacto .promociones .container_promo_grid .grid_card .img img {
+            width: 250px;
+            background-position: center;
+            background-size: cover; }
 
 /* --------  MEDIA QUERY ----------*/
 /* Estrategia responsive = Mobile Last */
-@media (max-width: 755px) {
-  .container_form {
-    width: 100%; }
-  .container_form .information {
-    flex-direction: column;
-    width: 90%; }
-    .container_form .information .form_texto {
-      width: 100%;
-      background-color: #f388e6;
-      padding: 20px; }
-    .container_form .information .form_formulario {
-      width: 100%;
-      margin-top: 20px; } }
+@media (max-width: 1300px) {
+  .main_contacto .promociones .container_promo_grid .grid_card {
+    grid-template-columns: repeat(1, 1fr); } }
+
+@media (max-width: 800px) {
+  .main_contacto .promociones .container_promo_grid {
+    grid-template-columns: repeat(1, 1fr); } }
 
 .footer {
   display: flex;

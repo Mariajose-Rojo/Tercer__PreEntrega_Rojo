@@ -6,81 +6,87 @@
     align-items: center;
     justify-content: center;
     
+    
     .cabecera{
+
         @extend .titulo_cabecera;
     }
 
-    .container_form{
-        max-width: 900px;
-        // height: auto;
+    .container_form {
+        // grid-area: form;
+        max-width: 1200px;
+        height: auto; // Cambiado a auto para que se ajuste automáticamente al contenido
         border-radius: 20px;
         margin: 1rem;
         box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
         transition: all 1s ease;
+        background-color:rgb(254, 245, 245) ;
+        cursor: pointer; 
+        transition:all .5s ease;
+        
+        &:hover {
+            box-shadow: 0 5px 10px rgb(86, 74, 189);
+        }
 
-        .information{
+        .information {
             display: flex;
-            width:100%;
-            // height: 100%;
-            // justify-content: center;
+            flex-direction: column; // Cambiado a column para dispositivos de pantalla más pequeña
+            width: 100%;
+            height: auto; // Cambiado a auto para que se ajuste automáticamente al contenido
 
-            .form_texto{
-                width: 40%;
-                // height: 100%;
-                padding: 1rem;
+            .form_texto {
+                width: 100%; // Cambiado a 100% para ocupar todo el ancho en dispositivos pequeños
+                height: 100%;
+                padding: 2rem;
                 border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
+                border-top-right-radius: 20px; // Añadido para hacer coincidir los radios de esquina
                 background-color: $verde;
                 @extend .texto_centrado_box;
-                h2{
+                h2 {
                     font-size: 3rem;
                 }
-                .boton{
-                    @extend .boton_formulario
+                .boton {
+                    @extend .boton_formulario;
                 }
-                
             }
-            .form_formulario{
-                width: 60%;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                // height: 100%; // Establece la altura igual a la del contenedor padre
-                padding: 1rem; 
-                background-color: rgb(254, 245, 245);
-                background-size: contain;
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
 
-                .form_formulario_text{
+            .form_formulario {
+                width: 100%; // Cambiado a 100% para ocupar todo el ancho en dispositivos pequeños
+                height: auto; // Cambiado a auto para que se ajuste automáticamente al contenido
+                padding: 1rem;
+                background-color: rgb(254, 245, 245);
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px; // Añadido para hacer coincidir los radios de esquina
+
+                .form_formulario_text {
                     @extend .texto_centrado_box;
-                    h2{
+                    h2 {
                         font-size: 2.5rem;
                     }
-                    .icons{
+                    .icons {
                         margin: 15px;
                         display: flex;
                         justify-content: center;
-                        transition:all .5s ease;
-                        i{
+                        transition: all .5s ease;
+                        i {
                             border-radius: 50%;
                             padding: 15%;
                             box-shadow: $sombra;
-                            background-color: rgba(255, 255, 0, 0.405);
+                            background-color: pink;
                             color: #333;
                             cursor: pointer;
                             border: solid thin $rosa;
                             margin: 0 10px;
                             &:hover {
-                                background-color: $rosa;}
+                                background-color: $rosa;
+                            }
                         }
                     }
                 }
 
-                .form_labels{
+                .form_labels {
                     margin-top: 1rem;
-                    label{
+                    label {
                         background-color: white;
                         display: flex;
                         align-items: center;
@@ -90,7 +96,7 @@
                         border: solid thin grey;
                         box-shadow: $sombra;
 
-                        input{
+                        input {
                             background-color: white;
                             width: 100%;
                             padding: 4px;
@@ -99,15 +105,90 @@
                             color: #333;
                         }
                     }
-                    .boton{
+                    .boton {
                         @extend .boton_seleccion;
                     }
                 }
-                
             }
         }
     }
 
+    // -----Apartado de preguntas
+    .promociones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // width: 95%;
+        margin-bottom: 2rem;
+        .subtitulo{
+            @extend .cabecera_secundaria;
+            // background-color:$rosa;
+            // width: 100%;
+        }
+
+        .container_promo_grid{
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+            // grid-auto-rows: 350px;
+            // gap: 1.5rem;
+            width: 95%;
+    
+            .grid_card{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                border-radius: 8px;
+                // width: 800px;
+                // height: 300px;
+                background-color:white ;
+                //padding: 30px; 
+                
+                margin: 1rem;
+                box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+                cursor: pointer; 
+                transition:all .5s ease;
+        
+                &:hover {
+                    transform: scale(0.5);
+                    box-shadow: 0 5px 10px rgb(86, 74, 189);
+                }
+        
+                .parrafo{
+                    height: 100%;
+                    display: flex; /* el contenido se alinee correctamente */
+                    flex-direction: column; 
+                    align-items: center; /* Centra verticalmente el contenido */
+                    justify-content: center; 
+                    text-align: center;
+                    padding: 1.5rem;
+    
+                    background-color: white;
+                    border-radius: 8px;
+                    
+                    @extend .texto_centrado_box;
+        
+                    .boton{ @extend .boton_seleccion;
+                        // margin-bottom: 20px;
+                    }
+                }
+        
+                .img{
+                    background-color: $verde;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    img{
+                        width: 250px;
+                        background-position: center;
+                        background-size: cover;
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
 
 }
 
@@ -116,40 +197,25 @@
     /* --------  MEDIA QUERY ----------*/
 /* Estrategia responsive = Mobile Last */
 
-@media (max-width: 755px) {
-    .container_form{
-        width: 100%;
-    }
-    .container_form .information {
-        flex-direction: column;
-        // align-items: center;
-        width: 90%;
+@media (max-width: 1300px){
 
-        .form_texto {
-            width: 100%;
-            background-color: $rosa;
-            padding: 20px;
-        }
-
-        .form_formulario {
-            width: 100%;
-            margin-top: 20px; // Añade un margen superior entre los elementos
+    .main_contacto .promociones{     
+        .container_promo_grid .grid_card{
+             grid-template-columns: repeat(1, 1fr); 
+            //  grid-template-rows: 320px;
         }
     }
+    
 }
 
-// @media (max-width: 755px) {
-//     .container_form .information {
-//         flex-direction: column;
-//     }
 
-//     .container_form .information .form_texto {
-//         width: 100%;
-//         padding: 20px;
-//     }
+@media (max-width: 800px){
 
-//     .container_form .information .form_formulario {
-//         width: 100%;
-//         margin-top: 20px;
-//     }
-// }
+    .main_contacto .promociones{     
+        .container_promo_grid {
+             grid-template-columns: repeat(1, 1fr); 
+            //  grid-template-rows: 320px;
+        }
+    }
+
+}
