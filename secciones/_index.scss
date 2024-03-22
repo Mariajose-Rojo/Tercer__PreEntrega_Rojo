@@ -41,9 +41,6 @@
     margin-bottom: 1rem;
     .titulo1{
         @extend .titulo_principal;
-        // background-color:$rosa;
-        // padding: 1.5rem 2rem 1.5rem 2rem; 
-        /* arriba, derecha, abajo,izquierda */
     }
 
     .grid_container{
@@ -72,7 +69,7 @@
             transition: all .4s ease;
             &:hover {
                 box-shadow: 0 5px 10px rgb(86, 74, 189);
-                transform: translateY(-0.5%);
+                transform: translateY(-1%);
             }
         }
     
@@ -96,7 +93,7 @@
             transition: all .4s ease;
             &:hover {
                 box-shadow: 0 5px 10px rgb(74, 110, 189);
-                transform: translateY(-0.5%);
+                transform: translateY(-1%);
             }
         }
     
@@ -116,7 +113,7 @@
             }
             &:hover {
                 box-shadow: 0 5px 10px rgb(86, 74, 189);
-                transform: translateY(-0.5%);
+                transform: translateY(-1%);
             }
         }
     

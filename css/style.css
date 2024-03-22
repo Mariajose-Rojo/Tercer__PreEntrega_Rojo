@@ -43,8 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0rem 1rem 0rem;
-  gap: .5rem; }
+  width: 100%; }
   .titulo_cabecera h1, .main_nosotros .cabecera h1, .main_blog .cabecera h1, .grid_contacto .cabecera h1 {
     font-family: "Madimi One", sans-serif;
     font-size: 3rem;
@@ -55,18 +54,20 @@ body {
     padding: 1rem 0rem 1rem 0rem;
     text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2); }
   .titulo_cabecera p, .main_nosotros .cabecera p, .main_blog .cabecera p, .grid_contacto .cabecera p {
-    font-size: 18px;
-    text-align: center;
-    width: 80%; }
+    margin-top: 1rem;
+    font-size: 22px;
+    font-weight: bold;
+    width: 80%;
+    text-align: center; }
 
-.cabecera_secundaria, .main_catalogo .promociones .subtitulo, .main_nosotros .subtitulo {
+.cabecera_secundaria, .main_catalogo .promociones .subtitulo, .main_nosotros .subtitulo, .main_blog .text_subtitulo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem 0rem 1rem 0rem;
   gap: .5rem;
   width: 100%; }
-  .cabecera_secundaria h2, .main_catalogo .promociones .subtitulo h2, .main_nosotros .subtitulo h2 {
+  .cabecera_secundaria h2, .main_catalogo .promociones .subtitulo h2, .main_nosotros .subtitulo h2, .main_blog .text_subtitulo h2 {
     font-family: "Madimi One", sans-serif;
     color: white;
     text-align: center;
@@ -77,7 +78,7 @@ body {
     background-color: #f388e6;
     width: 100%;
     text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2); }
-  .cabecera_secundaria p, .main_catalogo .promociones .subtitulo p, .main_nosotros .subtitulo p {
+  .cabecera_secundaria p, .main_catalogo .promociones .subtitulo p, .main_nosotros .subtitulo p, .main_blog .text_subtitulo p {
     font-size: 22px;
     font-weight: bold;
     width: 80%;
@@ -86,15 +87,18 @@ body {
 .titulo_secundario, .main_nosotros .parrafo_e_img .parrafo h2, .grid_contacto .apartado h2, .grid_contacto .form .text_form h2 {
   font-family: "Madimi One", sans-serif;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  padding-left: 20px; }
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  color: #6cbff3;
+  text-align: center; }
 
 .parrafo_general, .main_nosotros .parrafo_e_img .parrafo p {
   font-size: 20px;
-  margin: 20px; }
+  margin: 1rem;
+  width: 80%;
+  text-align: center; }
 
-.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack, .main_catalogo .container_p1 .box_container .box, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo, .main_nosotros .cards_empleados_container .card .card_body {
+.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack, .main_catalogo .container_p1 .box_container .box, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo {
   display: flex;
   /* el contenido se alinee correctamente */
   flex-direction: column;
@@ -105,18 +109,37 @@ body {
   text-align: center;
   padding: 1rem;
   margin-bottom: 1.5rem; }
-  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2, .main_catalogo .container_p1 .box_container .box h2, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h2, .main_nosotros .cards_empleados_container .card .card_body h2 {
+  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2, .main_catalogo .container_p1 .box_container .box h2, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h2 {
     font-family: "Madimi One", sans-serif;
     padding-bottom: 1rem; }
-  .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .main_catalogo .container_p1 .box_container .box h3, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h3, .main_nosotros .cards_empleados_container .card .card_body h3 {
+  .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .main_catalogo .container_p1 .box_container .box h3, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h3 {
     font-family: "Madimi One", sans-serif;
     font-size: 26px;
     padding: 10px; }
-  .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .main_catalogo .container_p1 .box_container .box p, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo p, .main_nosotros .cards_empleados_container .card .card_body p {
+  .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .main_catalogo .container_p1 .box_container .box p, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo p {
     font-size: 20px;
     width: 80%; }
 
-.texto_resaltado, .main_blog .grid_page3 .img_3 h2, .main_blog .grid_page3 .img_4 h2, .main_blog .grid_page3 .img_5 h2, .main_blog .grid_page3 h2 {
+.texto_card_empleado, .main_nosotros .cards_empleados_container .card .card_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .texto_card_empleado h4, .main_nosotros .cards_empleados_container .card .card_body h4 {
+    font-family: "Madimi One", sans-serif;
+    text-align: center;
+    font-size: 22px;
+    padding: 12px 8px 12px 8px;
+    color: white;
+    background-color: #6cbff3;
+    width: 100%;
+    border: solid #585858 2px; }
+  .texto_card_empleado p, .main_nosotros .cards_empleados_container .card .card_body p {
+    font-size: 15px;
+    width: 90%;
+    margin: 1rem; }
+
+.texto_resaltado, .main_blog .grid_page3 .img_0 a h2, .main_blog .grid_page3 .img_1 a h2, .main_blog .grid_page3 .img_2 a h2, .main_blog .grid_page3 .img_3 a h2, .main_blog .grid_page3 .img_4 a h2, .main_blog .grid_page3 .img_5 a h2, .main_blog .grid_page3 a h2 {
   background-color: rgba(0, 0, 0, 0.584);
   /* Color de fondo semi-transparente */
   padding: 5px 10px;
@@ -124,7 +147,7 @@ body {
   color: #ffffff;
   /* Color del texto */
   text-align: center;
-  font-size: 20px; }
+  font-size: 24px; }
 
 .boton_seleccion, .main_index .grid_container .texto_top .boton, .main_index .grid_container .texto_ofertas .boton, .main_index .grid_container .texto_snack .boton, .main_catalogo .container_p1 .box_container .box .boton, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo .boton, .main_nosotros .parrafo_e_img .parrafo a, .grid_contacto .form .form_container .form_submit {
   font-family: "Madimi One", sans-serif;
@@ -160,40 +183,41 @@ body {
   .boton_banner:hover, .d-item .boton:hover {
     background-color: rgba(255, 255, 255, 0.542); }
 
-.header .container-fluid {
-  box-shadow: 0px 5px 5px 0px #e2e0e0;
-  width: 100%; }
-  .header .container-fluid .navbar-brand {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    cursor: pointer;
-    margin: 10px; }
-  .header .container-fluid .nav-item {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    cursor: pointer;
-    transition: all .4s ease;
-    margin: 10px; }
-    .header .container-fluid .nav-item a:hover {
-      color: #6cbff3;
-      font-weight: bold;
-      text-decoration: underline;
-      text-decoration-thickness: 4px;
-      text-underline-offset: 10px;
-      background-color: white; }
-
-.header .header__logo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: #6cbff3; }
-  .header .header__logo .logo_desk {
-    width: 200px;
-    margin-top: 7px;
-    margin-bottom: 7px; }
-  .header .header__logo .logo_cellphone {
-    display: none; }
+.header {
+  box-shadow: 0px 0px 16px 2px #44444490;
+  margin-bottom: 8px; }
+  .header .container-fluid {
+    width: 100%; }
+    .header .container-fluid .navbar-brand {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      cursor: pointer;
+      margin: 10px; }
+    .header .container-fluid .nav-item {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      cursor: pointer;
+      transition: all .4s ease;
+      margin: 10px; }
+      .header .container-fluid .nav-item a:hover {
+        color: #6cbff3;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-thickness: 4px;
+        text-underline-offset: 10px;
+        background-color: white; }
+  .header .header__logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #6cbff3; }
+    .header .header__logo .logo_desk {
+      width: 200px;
+      margin-top: 7px;
+      margin-bottom: 7px; }
+    .header .header__logo .logo_cellphone {
+      display: none; }
 
 /* pseudoclase para el navegador = para todos */
 /* -----------------------INDEX--------------------------- */
@@ -218,8 +242,6 @@ body {
 /* -------------------------- GRILLAS -------------------------- */
 .main_index {
   margin-bottom: 1rem; }
-  .main_index .titulo1 {
-    /* arriba, derecha, abajo,izquierda */ }
   .main_index .grid_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -235,7 +257,7 @@ body {
       transition: all .4s ease; }
       .main_index .grid_container .texto_top:hover {
         box-shadow: 0 5px 10px #564abd;
-        transform: translateY(-0.5%); }
+        transform: translateY(-1%); }
     .main_index .grid_container .img_top {
       grid-area: img_top;
       background-color: #fffa60;
@@ -252,7 +274,7 @@ body {
       transition: all .4s ease; }
       .main_index .grid_container .texto_ofertas:hover {
         box-shadow: 0 5px 10px #4a6ebd;
-        transform: translateY(-0.5%); }
+        transform: translateY(-1%); }
     .main_index .grid_container .img_ofertas {
       grid-area: img_oferta;
       background-color: #f388e6;
@@ -267,7 +289,7 @@ body {
       height: 100%; }
       .main_index .grid_container .texto_snack:hover {
         box-shadow: 0 5px 10px #564abd;
-        transform: translateY(-0.5%); }
+        transform: translateY(-1%); }
     .main_index .grid_container .img_snack {
       grid-area: img_snack;
       background-color: #fffa60;
@@ -380,18 +402,17 @@ body {
   flex-direction: column;
   align-items: center; }
   .main_nosotros .parrafo_e_img {
-    background-image: linear-gradient(to left, #6cbff3, white);
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(82, 80, 80, 0.679);
     display: flex;
-    padding: 1rem;
-    width: 95%;
+    width: 90%;
     margin: 1rem;
     border-radius: 8px;
-    box-shadow: rgba(98, 94, 94, 0.688);
     cursor: pointer;
     transition: all .5s ease; }
     .main_nosotros .parrafo_e_img:hover {
-      transform: translateY(-3%);
-      box-shadow: -1px 2px 15px 0px #646262; }
+      transform: translateY(-4%);
+      box-shadow: -1px 2px 15px 0px #564abd; }
     .main_nosotros .parrafo_e_img .parrafo {
       display: flex;
       flex-direction: column;
@@ -399,57 +420,36 @@ body {
       .main_nosotros .parrafo_e_img .parrafo p {
         width: 90%; }
       .main_nosotros .parrafo_e_img .parrafo a {
-        margin-bottom: 20px; }
+        margin-bottom: 2rem; }
     .main_nosotros .parrafo_e_img .img {
-      width: 300px;
+      width: 330px;
       background-size: cover;
       background-position: center;
       border-radius: 8px; }
-  .main_nosotros .grid_galery {
-    display: grid;
-    width: 95%;
-    /* hago 4 columnas de una fraccion */
-    grid-template-columns: repeat(4, 1fr);
-    /* uso auto-rows porque quiero q todas mis filas midan lo mismo */
-    grid-auto-rows: 400px;
-    gap: 1rem;
-    margin-bottom: 20px; }
-    .main_nosotros .grid_galery .grid_item {
-      display: flex;
-      /* hacer los bordes redondeados */
-      border-radius: 8px;
-      border: none;
-      box-shadow: -1px 2px 15px 0px #646262;
-      /* hacer que la imagen se ajuste a la medida de mi grilla */
-      background-size: cover;
-      background-position: center; }
   .main_nosotros .cards_empleados_container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    width: 95%; }
+    justify-content: space-around;
+    width: 95%;
+    margin-bottom: 2rem; }
     .main_nosotros .cards_empleados_container .card {
-      margin: 2rem 0 2rem 0;
-      border-radius: 8px; }
+      display: flex;
+      margin: 1rem 0 1rem 0;
+      border-radius: 8px;
+      width: 450px;
+      box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+      transition: transform 0.3s ease; }
+      .main_nosotros .cards_empleados_container .card:hover {
+        transform: scale(1.02); }
       .main_nosotros .cards_empleados_container .card .card_img {
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px; }
-      .main_nosotros .cards_empleados_container .card .card_body {
-        margin: 1rem; }
+        margin: 1rem 1rem 1rem 1rem;
+        border-radius: 50%;
+        background-color: #86EACC; }
 
 /* --------  MEDIA QUERY ----------*/
 /* Estrategia responsive = Mobile Last */
-@media (max-width: 900px) {
-  .main_nosotros .grid_galery {
-    /* hago 4 columnas de dos fraccion */
-    grid-template-columns: repeat(2, 2fr); } }
-
-@media (max-width: 700px) {
-  /*Cambia el tamaño de la grilla de la galeria */
-  .main_nosotros .grid_galery {
-    grid-template-columns: repeat(1, 100%); }
+@media (max-width: 750px) {
   .main_nosotros .parrafo_e_img {
     flex-direction: column; }
     .main_nosotros .parrafo_e_img .img {
@@ -459,81 +459,142 @@ body {
 .main_blog {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem; }
+  align-items: center; }
   .main_blog .grid_page3 {
+    background-color: white;
+    padding: 1.3rem;
+    border-radius: 8px;
     display: grid;
+    width: 95%;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "img0 img0 img1 img2" "img3 img4 img5 img5";
     grid-auto-rows: 300px;
-    gap: 1rem;
+    gap: 1.3rem;
     margin-top: 1rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
     .main_blog .grid_page3 .img_0 {
       grid-area: img0;
-      background-color: aquamarine;
       background-image: url("https://algunwey.com/wp-content/uploads/2018/07/curiosidades-donas-origen-historia.jpg");
       background-size: cover;
-      background-position: center; }
+      background-position: center;
+      box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+      cursor: pointer;
+      transition: all .4s ease;
+      /* Pseudoclase */ }
+      .main_blog .grid_page3 .img_0:hover {
+        box-shadow: 0px 0px 20px 3px #564abd; }
       .main_blog .grid_page3 .img_0 a {
         text-decoration: none; }
     .main_blog .grid_page3 .img_1 {
       grid-area: img1;
-      background-color: #f6f68f;
       background-image: url("https://mdr.ar/download/multimedia.miniatura.b1ff4d1dc341bf67.ZG9uYXMtY2FzZXJhc19taW5pYXR1cmEud2VicA%3D%3D.webp");
       background-size: cover;
-      background-position: center; }
+      background-position: center;
+      box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+      cursor: pointer;
+      transition: all .4s ease;
+      /* Pseudoclase */ }
+      .main_blog .grid_page3 .img_1:hover {
+        box-shadow: 0px 0px 20px 3px #564abd; }
       .main_blog .grid_page3 .img_1 a {
         text-decoration: none; }
     .main_blog .grid_page3 .img_2 {
       grid-area: img2;
-      background-color: #ac6ce7;
       background-image: url("https://www.gourmet.cl/wp-content/uploads/2022/10/RECETA-donuts-alta-9.jpg");
       background-size: cover;
-      background-position: center; }
+      background-position: center;
+      box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+      cursor: pointer;
+      transition: all .4s ease;
+      /* Pseudoclase */ }
+      .main_blog .grid_page3 .img_2:hover {
+        box-shadow: 0px 0px 20px 3px #564abd; }
       .main_blog .grid_page3 .img_2 a {
         text-decoration: none; }
     .main_blog .grid_page3 .img_3 {
       grid-area: img3;
-      background-image: url("https://img.freepik.com/vector-gratis/principales-grupos-alimentos-macronutrientes-vector_1308-125587.jpg");
+      background-image: url("https://img.freepik.com/fotos-premium/mujer-balanza-sostiene-donas-sus-manos-concepto-dieta-aumento-peso-perdida-peso-nutricion-adecuada-dulce_169016-16212.jpg");
       background-size: cover;
-      background-position: center; }
+      background-position: center;
+      box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+      cursor: pointer;
+      transition: all .4s ease;
+      /* Pseudoclase */ }
+      .main_blog .grid_page3 .img_3:hover {
+        box-shadow: 0px 0px 20px 3px #564abd; }
       .main_blog .grid_page3 .img_3 a {
         text-decoration: none; }
     .main_blog .grid_page3 .img_4 {
       grid-area: img4;
       background-image: url("https://vitinasrv.com/wp-content/uploads/2021/02/Funciones-del-equipo-de-la-Pasteleria.jpg");
       background-size: cover;
-      background-position: center; }
+      background-position: center;
+      box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+      cursor: pointer;
+      transition: all .4s ease;
+      /* Pseudoclase */ }
+      .main_blog .grid_page3 .img_4:hover {
+        box-shadow: 0px 0px 20px 3px #564abd; }
       .main_blog .grid_page3 .img_4 a {
         text-decoration: none; }
     .main_blog .grid_page3 .img_5 {
       grid-area: img5;
       background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/4QOXURZZLJB4HEKAQGJNAPRRTQ.jpg");
       background-size: cover;
-      background-position: center; }
+      background-position: center;
+      box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+      cursor: pointer;
+      transition: all .4s ease;
+      /* Pseudoclase */ }
+      .main_blog .grid_page3 .img_5:hover {
+        box-shadow: 0px 0px 20px 3px #564abd; }
       .main_blog .grid_page3 .img_5 a {
         text-decoration: none; }
-
-/* Pseudoclase para la etiqueta <a> */
-.grid_page3 .img_1 a h2:visited {
-  color: #757585; }
-
-.grid_page3 a h2:hover {
-  color: #00d5ff; }
+    .main_blog .grid_page3 a {
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .4s ease;
+      /* Pseudoclase para el h2 de la etiqueta <a> */ }
+      .main_blog .grid_page3 a h2:hover {
+        color: aqua; }
+  .main_blog .grid_galery {
+    display: grid;
+    width: 95%;
+    /* hago 4 columnas de una fraccion */
+    grid-template-columns: repeat(4, 1fr);
+    /* uso auto-rows porque quiero q todas mis filas midan lo mismo */
+    grid-auto-rows: 400px;
+    gap: 1rem;
+    margin-bottom: 20px; }
+    .main_blog .grid_galery .grid_item {
+      display: flex;
+      /* hacer los bordes redondeados */
+      border-radius: 8px;
+      border: none;
+      box-shadow: -1px 2px 15px 0px #564abd;
+      /* hacer que la imagen se ajuste a la medida de mi grilla */
+      background-size: cover;
+      background-position: center; }
 
 /* --------  MEDIA QUERY ----------*/
 /* Estrategia responsive = Mobile Last */
 @media (max-width: 900px) {
   .main_blog .grid_page3 {
     grid-template-columns: repeat(2, 50%);
-    grid-template-areas: "img0 img1" "img2 img3" "img4 img5"; } }
+    grid-template-areas: "img0 img1" "img2 img3" "img4 img5"; }
+  .main_blog .grid_galery {
+    /* hago 4 columnas de dos fraccion */
+    grid-template-columns: repeat(2, 2fr); } }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   /* cambiar el tamaño de la grilla blog/page3 */
   .main_blog .grid_page3 {
     grid-template-columns: repeat(1, 100%);
-    grid-template-areas: "img0" "img1" "img2" "img3" "img4" "img5"; } }
+    grid-template-areas: "img0" "img1" "img2" "img3" "img4" "img5"; }
+  /*Cambia el tamaño de la grilla de la galeria */
+  .main_blog .grid_galery {
+    grid-template-columns: repeat(1, 100%); } }
 
 /* ------------------ PAGE 4 ------------------ */
 .grid_contacto {
@@ -559,7 +620,7 @@ body {
     background-color: #86EACC;
     padding: 3rem 2rem;
     border-radius: 10px;
-    box-shadow: -1px 2px 15px 0px #646262;
+    box-shadow: -1px 2px 15px 0px #564abd;
     gap: 1.5rem; }
     .grid_contacto .form .text_form p {
       font-size: 20px;

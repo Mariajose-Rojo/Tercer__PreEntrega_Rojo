@@ -3,15 +3,20 @@
 .main_blog{
     display: flex;
     flex-direction: column;
-    // align-items: center;
-    margin-top: 1rem;
+    align-items: center;
 
     .cabecera{
         @extend .titulo_cabecera;
     }
     
+    // ----------------GRILLA BLOG---------------------
     .grid_page3{
+        // box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+        background-color: white;
+        padding: 1.3rem;
+        border-radius: 8px;
         display: grid;
+        width: 95%; 
         justify-content: center;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
@@ -19,47 +24,27 @@
             "img3 img4 img5 img5"
         ;
         grid-auto-rows: 300px;
-        gap: 1rem;
+        gap: 1.3rem;
         margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         
         .img_0{
-            grid-area: img0;
-            background-color: aquamarine;
-            background-image: url('https://algunwey.com/wp-content/uploads/2018/07/curiosidades-donas-origen-historia.jpg');
-            background-size: cover;
-            background-position: center;
-
-            a{
-                text-decoration: none;
-            }
+            @include img_blog (img0, 'https://algunwey.com/wp-content/uploads/2018/07/curiosidades-donas-origen-historia.jpg');
         }
         
         .img_1{
-            grid-area: img1;
-            background-color: rgb(246, 246, 143) ;
-            background-image: url('https://mdr.ar/download/multimedia.miniatura.b1ff4d1dc341bf67.ZG9uYXMtY2FzZXJhc19taW5pYXR1cmEud2VicA%3D%3D.webp');
-            background-size: cover;
-            background-position: center;
-            a{
-                text-decoration: none;
-            }
+            @include img_blog (img1, 'https://mdr.ar/download/multimedia.miniatura.b1ff4d1dc341bf67.ZG9uYXMtY2FzZXJhc19taW5pYXR1cmEud2VicA%3D%3D.webp');
+            
         }
         
         .img_2{
-            grid-area: img2;
-            background-color: rgb(172, 108, 231);
-            background-image: url('https://www.gourmet.cl/wp-content/uploads/2022/10/RECETA-donuts-alta-9.jpg');
-            background-size: cover;
-            background-position: center;
-
-            a{
-                text-decoration: none;
-            }
+            @include img_blog (img2, 'https://www.gourmet.cl/wp-content/uploads/2022/10/RECETA-donuts-alta-9.jpg');
+            
         }
         
         .img_3{
-            @include img_blog (img3, 'https://img.freepik.com/vector-gratis/principales-grupos-alimentos-macronutrientes-vector_1308-125587.jpg')
+            @include img_blog (img3, 'https://img.freepik.com/fotos-premium/mujer-balanza-sostiene-donas-sus-manos-concepto-dieta-aumento-peso-perdida-peso-nutricion-adecuada-dulce_169016-16212.jpg');
+            
         }
         
         .img_4{
@@ -71,31 +56,64 @@
            
         }
         
-        h2{
-            @extend .texto_resaltado;
-        };
+
+        a{
+            text-decoration: none;
+            cursor: pointer;
+            transition: all .4s ease;
+
+        /* Pseudoclase para el h2 de la etiqueta <a> */
+            h2{
+                @extend .texto_resaltado;
+
+                &:hover{
+                    color: aqua;
+                }
+            }
+        }
     }
 
+    .text_subtitulo{
+        @extend .cabecera_secundaria;
+    }
+    // -------------------GRILLA GALERIA-----------------------
+    .grid_galery{
+        display: grid;
+        width: 95%; 
+        /* hago 4 columnas de una fraccion */
+        grid-template-columns: repeat(4, 1fr);
+        /* uso auto-rows porque quiero q todas mis filas midan lo mismo */
+        grid-auto-rows: 400px;
+        gap: 1rem;
+        margin-bottom: 20px;
+
+    
+        .grid_item{
+            display: flex;
+            // align-items: center;
+            // justify-content: center;
+        
+            /* hacer los bordes redondeados */
+            border-radius: 8px;
+            border:none;
+            box-shadow: $sombra_box;
+            /* hacer que la imagen se ajuste a la medida de mi grilla */
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+
 }
 
 
-
-
-
-/* Pseudoclase para la etiqueta <a> */
-
-.grid_page3 .img_1 a h2:visited{
-    color: rgb(117, 117, 133);
-}
-
-.grid_page3 a h2:hover{
-    color: rgb(0, 213, 255);
-}
 
 
     /* --------  MEDIA QUERY ----------*/
 /* Estrategia responsive = Mobile Last */
 
+
+// TRAER MEDIA QUERY DE LA GALERIA DE FOTOS
 @media (max-width: 900px){
     .main_blog .grid_page3{
          grid-template-columns: repeat(2, 50%);
@@ -105,21 +123,32 @@
             "img4 img5"
             ;
         }    
+
+    .main_blog .grid_galery{
+        /* hago 4 columnas de dos fraccion */
+         grid-template-columns: repeat(2, 2fr);}
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 650px){
     /* cambiar el tamaño de la grilla blog/page3 */
     .main_blog .grid_page3{
         grid-template-columns: repeat(1, 100%);
         grid-template-areas: 
-            "img0"
-            "img1"
-            "img2"
-            "img3"
-            "img4"
-            "img5"
+        "img0"
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
         ;
     }
 
+    /*Cambia el tamaño de la grilla de la galeria */
+    .main_blog .grid_galery{ grid-template-columns: repeat(1, 100%)}
+
 }
+
+
+
+

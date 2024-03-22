@@ -18,10 +18,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // background-color:$rosa;
-    padding: 1rem 0rem 1rem 0rem;
-    gap: .5rem;
-    // border: solid 4px $celeste;
+    width: 100%;
+ 
     h1{
         font-family: $fuente_subtitulo; // Usar la variable para la tipografía
         font-size: 3rem;
@@ -29,19 +27,16 @@
         color: white;
         background-color:$rosa;
         width: 100%;
-        // background-color:rgba(255, 0, 0, 0.294);
-        // border-radius: 10px;
         padding: 1rem 0rem 1rem 0rem; ;
-        // width: 100%;
         text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
     }
 
     p{
-        font-size: 18px;
-        text-align: center;
+        margin-top: 1rem;
+        font-size: 22px;
+        font-weight: bold;
         width: 80%;
-        // background-color: rgba(255, 255, 255, 0.6);
-        // border-radius: 10px;
+        text-align: center;
     }
 }
 
@@ -78,15 +73,19 @@
     font-family: $fuente_subtitulo;
     // text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    padding-left: 20px;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    color: $celeste;
+    text-align: center;
+    // background-color: $celeste;
+    // width: 100%;
 }
 
 .parrafo_general{
     font-size: 20px;
-    margin: 20px;
-    // text-align: center;
+    margin: 1rem;
+    width: 80%;
+    text-align: center;
 }
 
 .texto_centrado_box{
@@ -114,18 +113,40 @@
     }
 }
 
+.texto_card_empleado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h4{
+        font-family: $fuente_subtitulo;
+        text-align: center;
+        font-size: 22px;
+        padding: 12px 8px 12px 8px; 
+        color: white;
+        background-color: $celeste;
+        width: 100%;
+        border: solid rgb(88, 88, 88) 2px;
+    }
+
+    p{
+        font-size: 15px;
+        width: 90%;
+        margin: 1rem;
+    }
+}
+
 .texto_resaltado {
     background-color: rgba(0, 0, 0, 0.584); /* Color de fondo semi-transparente */
     padding: 5px 10px; /* Ajusta el relleno para que el fondo del texto sea visible */
     color: #ffffff; /* Color del texto */
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
   }
 
 .boton_seleccion{
 
-    // display: inline-block; 
-    // display: inline-flex;
     font-family: $fuente_subtitulo;
     font-size: 16px;
     text-transform: uppercase; //pone todo en mayuscula
@@ -148,9 +169,6 @@
 }
 
 .boton_banner{
-
-    // display: inline-block; 
-    // display: inline-flex;
     font-family: $fuente_subtitulo;
     font-size: 20px;
     text-transform: capitalize; //pone todo en mayuscula
@@ -191,10 +209,22 @@
     background-image: url($img);
     background-size: cover;
     background-position: center;
+    // border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(100, 98, 98, 0.473);
+    cursor: pointer;
+    transition: all .4s ease;
+
+    /* Pseudoclase */
+    &:hover{
+        box-shadow: 0px 0px 20px 3px rgb(86, 74, 189);
+    }
+    
     a{
         text-decoration: none;
+        h2{
+            @extend .texto_resaltado;
+        }
     }
-    h2{
-        @extend .texto_resaltado;
-    }
+
+
 }
