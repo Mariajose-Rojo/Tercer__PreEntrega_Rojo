@@ -69,7 +69,7 @@
             transition: all .4s ease;
             &:hover {
                 box-shadow: 0 5px 10px rgb(86, 74, 189);
-                transform: translateY(-1%);
+                transform: translateY(-2%);
             }
         }
     
@@ -93,14 +93,15 @@
             transition: all .4s ease;
             &:hover {
                 box-shadow: 0 5px 10px rgb(74, 110, 189);
-                transform: translateY(-1%);
+                transform: translateY(-2%);
             }
         }
     
         .img_ofertas{
             grid-area: img_oferta;
             background-color:$rosa; 
-            @include img_fondo('https://dunkindonuts12.files.wordpress.com/2019/06/745x420-menu.png');
+            @include img_fondo('https://supermaterias.com/cdn/shop/files/Caja-para-6-donas_b1212d1b-a967-4446-87eb-842341970068_1050x700.png?v=1687315039');
+            // https://dunkindonuts12.files.wordpress.com/2019/06/745x420-menu.png
         }
 
         .texto_snack {
@@ -113,7 +114,7 @@
             }
             &:hover {
                 box-shadow: 0 5px 10px rgb(86, 74, 189);
-                transform: translateY(-1%);
+                transform: translateY(-2%);
             }
         }
     

@@ -1,121 +1,155 @@
 /* ------------------ PAGE 4 ------------------ */
 
-.grid_contacto{
-    display: grid;
+.main_contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-        "titulo titulo titulo"
-        "form form aside";
     
-    gap: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
-
     .cabecera{
-        grid-area: titulo;
-
         @extend .titulo_cabecera;
-
-        // .titulo1{
-        //      @extend .titulo_principal;}
-
-        // p{
-        //     @extend .parrafo_general;
-        // }
     }
 
-    .apartado{
-        grid-area: aside;
-        background-color: rgb(116, 238, 238);
-        h2{
-            @extend .titulo_secundario;
-        }
-    }
+    .container_form{
+        max-width: 900px;
+        // height: auto;
+        border-radius: 20px;
+        margin: 1rem;
+        box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+        transition: all 1s ease;
 
-    
-    // ESTILO  DEL FORMULARIO
-    .form{
-        grid-area: form;
+        .information{
+            display: flex;
+            width:100%;
+            // height: 100%;
+            // justify-content: center;
 
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    
-        background-color:$verde;
-        // rgb(255, 252, 252);
-        padding: 3rem 2rem;
-        border-radius: 10px;
-        box-shadow: $sombra_box;
-        // 0 5px 10px -5px rgb(0 0 0 /30%)
-
-        gap: 1.5rem;
-
-        .text_form{
-            h2{
-                @extend .titulo_secundario;
-            }
-
-            p{
-                font-size: 20px;
-                text-align: center;
-            }
-        }
-
-
-        .form_container{
-            margin-top: 1rem;
-            display: grid;
-            gap: 1rem;
-
-            .form_group{
-                position: relative;
-                color: rgb(177, 176, 176);
-
-                .form_input{
-                    width: 100%;
-                    font-family:$fuente_general;
-                    // background-color: rgba(127, 255, 212, 0.231);
-                    border-radius: 5px;
-                    border-color:rgb(177, 176, 176) ;
-                    margin-bottom: .5rem;
+            .form_texto{
+                width: 40%;
+                // height: 100%;
+                padding: 1rem;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                background-color: $verde;
+                @extend .texto_centrado_box;
+                h2{
+                    font-size: 3rem;
                 }
-
+                .boton{
+                    @extend .boton_formulario
+                }
+                
             }
-
-            .form_submit{
+            .form_formulario{
+                width: 60%;
+                display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-                margin-top: 1rem;
-                @extend .boton_seleccion;
+                // height: 100%; // Establece la altura igual a la del contenedor padre
+                padding: 1rem; 
+                background-color: rgb(254, 245, 245);
+                background-size: contain;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+
+                .form_formulario_text{
+                    @extend .texto_centrado_box;
+                    h2{
+                        font-size: 2.5rem;
+                    }
+                    .icons{
+                        margin: 15px;
+                        display: flex;
+                        justify-content: center;
+                        transition:all .5s ease;
+                        i{
+                            border-radius: 50%;
+                            padding: 15%;
+                            box-shadow: $sombra;
+                            background-color: rgba(255, 255, 0, 0.405);
+                            color: #333;
+                            cursor: pointer;
+                            border: solid thin $rosa;
+                            margin: 0 10px;
+                            &:hover {
+                                background-color: $rosa;}
+                        }
+                    }
+                }
+
+                .form_labels{
+                    margin-top: 1rem;
+                    label{
+                        background-color: white;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 1rem;
+                        border-radius: 30px;
+                        padding: 10px;
+                        border: solid thin grey;
+                        box-shadow: $sombra;
+
+                        input{
+                            background-color: white;
+                            width: 100%;
+                            padding: 4px;
+                            border: none;
+                            outline: none;
+                            color: #333;
+                        }
+                    }
+                    .boton{
+                        @extend .boton_seleccion;
+                    }
+                }
+                
             }
         }
     }
+
+
 }
 
-
-// .form{
-//     grid-area: form;
-//     background-color: pink;
-//     display: flex;
-    
-//     flex-direction: column;
-//     flex-wrap: wrap;
-// }   
 
 
     /* --------  MEDIA QUERY ----------*/
 /* Estrategia responsive = Mobile Last */
-@media (max-width: 900px){
 
-    /* Modificar medida page 4, paso de grid a flex en columna */
-    .grid_contacto{
-        display: flex;
-        justify-content: center;
+@media (max-width: 755px) {
+    .container_form{
+        width: 100%;
+    }
+    .container_form .information {
         flex-direction: column;
-        flex-wrap: wrap;
-     }
+        // align-items: center;
+        width: 90%;
+
+        .form_texto {
+            width: 100%;
+            background-color: $rosa;
+            padding: 20px;
+        }
+
+        .form_formulario {
+            width: 100%;
+            margin-top: 20px; // Añade un margen superior entre los elementos
+        }
+    }
 }
+
+// @media (max-width: 755px) {
+//     .container_form .information {
+//         flex-direction: column;
+//     }
+
+//     .container_form .information .form_texto {
+//         width: 100%;
+//         padding: 20px;
+//     }
+
+//     .container_form .information .form_formulario {
+//         width: 100%;
+//         margin-top: 20px;
+//     }
+// }

@@ -39,12 +39,12 @@ body {
   background-color: #f388e6;
   padding: 1.5rem 2rem 1.5rem 2rem; }
 
-.titulo_cabecera, .main_nosotros .cabecera, .main_blog .cabecera, .grid_contacto .cabecera {
+.titulo_cabecera, .main_nosotros .cabecera, .main_blog .cabecera, .main_contacto .cabecera {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%; }
-  .titulo_cabecera h1, .main_nosotros .cabecera h1, .main_blog .cabecera h1, .grid_contacto .cabecera h1 {
+  .titulo_cabecera h1, .main_nosotros .cabecera h1, .main_blog .cabecera h1, .main_contacto .cabecera h1 {
     font-family: "Madimi One", sans-serif;
     font-size: 3rem;
     text-align: center;
@@ -53,7 +53,7 @@ body {
     width: 100%;
     padding: 1rem 0rem 1rem 0rem;
     text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2); }
-  .titulo_cabecera p, .main_nosotros .cabecera p, .main_blog .cabecera p, .grid_contacto .cabecera p {
+  .titulo_cabecera p, .main_nosotros .cabecera p, .main_blog .cabecera p, .main_contacto .cabecera p {
     margin-top: 1rem;
     font-size: 22px;
     font-weight: bold;
@@ -84,7 +84,7 @@ body {
     width: 80%;
     text-align: center; }
 
-.titulo_secundario, .main_nosotros .parrafo_e_img .parrafo h2, .grid_contacto .apartado h2, .grid_contacto .form .text_form h2 {
+.titulo_secundario, .main_nosotros .parrafo_e_img .parrafo h2 {
   font-family: "Madimi One", sans-serif;
   font-size: 2.5rem;
   margin-top: 2rem;
@@ -98,7 +98,7 @@ body {
   width: 80%;
   text-align: center; }
 
-.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack, .main_catalogo .container_p1 .box_container .box, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo {
+.texto_centrado_box, .main_index .grid_container .texto_top, .main_index .grid_container .texto_ofertas, .main_index .grid_container .texto_snack, .main_catalogo .container_p1 .box_container .box, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo, .main_contacto .container_form .information .form_texto, .main_contacto .container_form .information .form_formulario .form_formulario_text {
   display: flex;
   /* el contenido se alinee correctamente */
   flex-direction: column;
@@ -109,14 +109,14 @@ body {
   text-align: center;
   padding: 1rem;
   margin-bottom: 1.5rem; }
-  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2, .main_catalogo .container_p1 .box_container .box h2, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h2 {
+  .texto_centrado_box h2, .main_index .grid_container .texto_top h2, .main_index .grid_container .texto_ofertas h2, .main_index .grid_container .texto_snack h2, .main_catalogo .container_p1 .box_container .box h2, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h2, .main_contacto .container_form .information .form_texto h2, .main_contacto .container_form .information .form_formulario .form_formulario_text h2 {
     font-family: "Madimi One", sans-serif;
-    padding-bottom: 1rem; }
-  .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .main_catalogo .container_p1 .box_container .box h3, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h3 {
+    padding-bottom: 12px; }
+  .texto_centrado_box h3, .main_index .grid_container .texto_top h3, .main_index .grid_container .texto_ofertas h3, .main_index .grid_container .texto_snack h3, .main_catalogo .container_p1 .box_container .box h3, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo h3, .main_contacto .container_form .information .form_texto h3, .main_contacto .container_form .information .form_formulario .form_formulario_text h3 {
     font-family: "Madimi One", sans-serif;
     font-size: 26px;
     padding: 10px; }
-  .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .main_catalogo .container_p1 .box_container .box p, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo p {
+  .texto_centrado_box p, .main_index .grid_container .texto_top p, .main_index .grid_container .texto_ofertas p, .main_index .grid_container .texto_snack p, .main_catalogo .container_p1 .box_container .box p, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo p, .main_contacto .container_form .information .form_texto p, .main_contacto .container_form .information .form_formulario .form_formulario_text p {
     font-size: 20px;
     width: 80%; }
 
@@ -149,7 +149,7 @@ body {
   text-align: center;
   font-size: 24px; }
 
-.boton_seleccion, .main_index .grid_container .texto_top .boton, .main_index .grid_container .texto_ofertas .boton, .main_index .grid_container .texto_snack .boton, .main_catalogo .container_p1 .box_container .box .boton, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo .boton, .main_nosotros .parrafo_e_img .parrafo a, .grid_contacto .form .form_container .form_submit {
+.boton_seleccion, .main_index .grid_container .texto_top .boton, .main_index .grid_container .texto_ofertas .boton, .main_index .grid_container .texto_snack .boton, .main_catalogo .container_p1 .box_container .box .boton, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo .boton, .main_nosotros .parrafo_e_img .parrafo a, .main_contacto .container_form .information .form_formulario .form_labels .boton {
   font-family: "Madimi One", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
@@ -163,7 +163,7 @@ body {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all .5s ease; }
-  .boton_seleccion:hover, .main_index .grid_container .texto_top .boton:hover, .main_index .grid_container .texto_ofertas .boton:hover, .main_index .grid_container .texto_snack .boton:hover, .main_catalogo .container_p1 .box_container .box .boton:hover, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo .boton:hover, .main_nosotros .parrafo_e_img .parrafo a:hover, .grid_contacto .form .form_container .form_submit:hover {
+  .boton_seleccion:hover, .main_index .grid_container .texto_top .boton:hover, .main_index .grid_container .texto_ofertas .boton:hover, .main_index .grid_container .texto_snack .boton:hover, .main_catalogo .container_p1 .box_container .box .boton:hover, .main_catalogo .promociones .container_promo_grid .grid_card .parrafo .boton:hover, .main_nosotros .parrafo_e_img .parrafo a:hover, .main_contacto .container_form .information .form_formulario .form_labels .boton:hover {
     background-color: #fffa60; }
 
 .boton_banner, .d-item .boton {
@@ -182,6 +182,20 @@ body {
   transition: all .5s ease; }
   .boton_banner:hover, .d-item .boton:hover {
     background-color: rgba(255, 255, 255, 0.542); }
+
+.boton_formulario, .main_contacto .container_form .information .form_texto .boton {
+  background-color: transparent;
+  outline: none;
+  border: solid 2px #f388e6;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: #333;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all .5s ease; }
+  .boton_formulario:hover, .main_contacto .container_form .information .form_texto .boton:hover {
+    background-color: #f388e6;
+    color: white; }
 
 .header {
   box-shadow: 0px 0px 16px 2px #44444490;
@@ -257,7 +271,7 @@ body {
       transition: all .4s ease; }
       .main_index .grid_container .texto_top:hover {
         box-shadow: 0 5px 10px #564abd;
-        transform: translateY(-1%); }
+        transform: translateY(-2%); }
     .main_index .grid_container .img_top {
       grid-area: img_top;
       background-color: #fffa60;
@@ -274,11 +288,11 @@ body {
       transition: all .4s ease; }
       .main_index .grid_container .texto_ofertas:hover {
         box-shadow: 0 5px 10px #4a6ebd;
-        transform: translateY(-1%); }
+        transform: translateY(-2%); }
     .main_index .grid_container .img_ofertas {
       grid-area: img_oferta;
       background-color: #f388e6;
-      background-image: url("https://dunkindonuts12.files.wordpress.com/2019/06/745x420-menu.png");
+      background-image: url("https://supermaterias.com/cdn/shop/files/Caja-para-6-donas_b1212d1b-a967-4446-87eb-842341970068_1050x700.png?v=1687315039");
       background-position: center;
       background-size: contain;
       /* Ajusta el tamaño de la imagen para que se ajuste dentro del contenedor */
@@ -289,7 +303,7 @@ body {
       height: 100%; }
       .main_index .grid_container .texto_snack:hover {
         box-shadow: 0 5px 10px #564abd;
-        transform: translateY(-1%); }
+        transform: translateY(-2%); }
     .main_index .grid_container .img_snack {
       grid-area: img_snack;
       background-color: #fffa60;
@@ -597,61 +611,91 @@ body {
     grid-template-columns: repeat(1, 100%); } }
 
 /* ------------------ PAGE 4 ------------------ */
-.grid_contacto {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "titulo titulo titulo" "form form aside";
-  gap: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-  .grid_contacto .cabecera {
-    grid-area: titulo; }
-  .grid_contacto .apartado {
-    grid-area: aside;
-    background-color: #74eeee; }
-  .grid_contacto .form {
-    grid-area: form;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: #86EACC;
-    padding: 3rem 2rem;
-    border-radius: 10px;
-    box-shadow: -1px 2px 15px 0px #564abd;
-    gap: 1.5rem; }
-    .grid_contacto .form .text_form p {
-      font-size: 20px;
-      text-align: center; }
-    .grid_contacto .form .form_container {
-      margin-top: 1rem;
-      display: grid;
-      gap: 1rem; }
-      .grid_contacto .form .form_container .form_group {
-        position: relative;
-        color: #b1b0b0; }
-        .grid_contacto .form .form_container .form_group .form_input {
-          width: 100%;
-          font-family: "Montserrat Alternates", sans-serif;
-          border-radius: 5px;
-          border-color: #b1b0b0;
-          margin-bottom: .5rem; }
-      .grid_contacto .form .form_container .form_submit {
+.main_contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .main_contacto .container_form {
+    max-width: 900px;
+    border-radius: 20px;
+    margin: 1rem;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease; }
+    .main_contacto .container_form .information {
+      display: flex;
+      width: 100%; }
+      .main_contacto .container_form .information .form_texto {
+        width: 40%;
+        padding: 1rem;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: #86EACC; }
+        .main_contacto .container_form .information .form_texto h2 {
+          font-size: 3rem; }
+      .main_contacto .container_form .information .form_formulario {
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        margin-top: 1rem; }
+        padding: 1rem;
+        background-color: #fef5f5;
+        background-size: contain;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px; }
+        .main_contacto .container_form .information .form_formulario .form_formulario_text h2 {
+          font-size: 2.5rem; }
+        .main_contacto .container_form .information .form_formulario .form_formulario_text .icons {
+          margin: 15px;
+          display: flex;
+          justify-content: center;
+          transition: all .5s ease; }
+          .main_contacto .container_form .information .form_formulario .form_formulario_text .icons i {
+            border-radius: 50%;
+            padding: 15%;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 0, 0.405);
+            color: #333;
+            cursor: pointer;
+            border: solid thin #f388e6;
+            margin: 0 10px; }
+            .main_contacto .container_form .information .form_formulario .form_formulario_text .icons i:hover {
+              background-color: #f388e6; }
+        .main_contacto .container_form .information .form_formulario .form_labels {
+          margin-top: 1rem; }
+          .main_contacto .container_form .information .form_formulario .form_labels label {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            border-radius: 30px;
+            padding: 10px;
+            border: solid thin grey;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); }
+            .main_contacto .container_form .information .form_formulario .form_labels label input {
+              background-color: white;
+              width: 100%;
+              padding: 4px;
+              border: none;
+              outline: none;
+              color: #333; }
 
 /* --------  MEDIA QUERY ----------*/
 /* Estrategia responsive = Mobile Last */
-@media (max-width: 900px) {
-  /* Modificar medida page 4, paso de grid a flex en columna */
-  .grid_contacto {
-    display: flex;
-    justify-content: center;
+@media (max-width: 755px) {
+  .container_form {
+    width: 100%; }
+  .container_form .information {
     flex-direction: column;
-    flex-wrap: wrap; } }
+    width: 90%; }
+    .container_form .information .form_texto {
+      width: 100%;
+      background-color: #f388e6;
+      padding: 20px; }
+    .container_form .information .form_formulario {
+      width: 100%;
+      margin-top: 20px; } }
 
 .footer {
   display: flex;
